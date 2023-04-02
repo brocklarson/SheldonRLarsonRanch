@@ -1,70 +1,120 @@
 const body = document.body;
-const navbar_container = document.createElement('div');
+const navbar_container = document.createElement('header');
 
-const navbar = document.createElement('ul');
+const title = document.createElement('div');
+title.classList.add('left-menu');
+const title_a = document.createElement('a');
+title_a.href = '/'
+const title_image = document.createElement('img');
+title_image.src = '/assetts/icons/logo_title.svg'
 
-const home = document.createElement('li');
-const home_a = document.createElement('a');
-home_a.href = '/';
-home_a.innerHTML = 'Home';
+const navbar = document.createElement('div');
+navbar.classList.add('right-menu');
+const chevron = document.createElement('img');
+chevron.src = '/assetts/icons/chevron-down-small.svg';
 
-const aboutUs = document.createElement('li');
-const aboutUs_a = document.createElement('a');
-aboutUs_a.href = '/about-us';
-aboutUs_a.innerHTML = 'About Us';
+const home = document.createElement('a');
+home.href = '/';
+home.innerHTML = 'Home';
 
-const cabins = document.createElement('li');
-const cabins_a = document.createElement('a');
-cabins_a.href = '/cabins';
-cabins_a.innerHTML = 'Cabins';
+const aboutUs = document.createElement('a');
+aboutUs.href = '/about-us';
+aboutUs.innerHTML = 'About Us';
 
-const gallery = document.createElement('li');
-const gallery_a = document.createElement('a');
-gallery_a.href = '/gallery';
-gallery_a.innerHTML = 'Gallery';
+const cabins = document.createElement('a');
+cabins.href = '/cabins';
+cabins.innerHTML = 'Cabins&nbsp;' + chevron.outerHTML;
+cabins.classList.add('dropdown-toggle');
 
-const availability = document.createElement('li');
-const availability_a = document.createElement('a');
-availability_a.href = '/availability';
-availability_a.innerHTML = 'Availability';
+const cabins_dropdown = document.createElement('div');
+cabins_dropdown.classList.add('dropdown');
+const main_cabin = document.createElement('a');
+main_cabin.innerHTML = 'Main Cabin';
+main_cabin.href = '/cabins/main-cabin';
+const guest_cabin = document.createElement('a');
+guest_cabin.innerHTML = 'Guest Cabin';
+guest_cabin.href = '/cabins/guest-cabin';
+const events = document.createElement('a');
+events.innerHTML = 'Events';
+events.href = '/cabins/events';
 
-const attractions = document.createElement('li');
-const attractions_a = document.createElement('a');
-attractions_a.href = '/attractions';
-attractions_a.innerHTML = 'Attractions';
+const gallery = document.createElement('a');
+gallery.href = '/gallery';
+gallery.innerHTML = 'Gallery';
 
-const map = document.createElement('li');
-const map_a = document.createElement('a');
-map_a.href = '/map';
-map_a.innerHTML = 'Map';
+const availability = document.createElement('a');
+availability.href = '/availability';
+availability.innerHTML = 'Availability';
 
-const contact = document.createElement('li');
-const contact_a = document.createElement('a');
-contact_a.href = '/contact';
-contact_a.innerHTML = 'Contact';
+const attractions = document.createElement('a');
+attractions.href = '/attractions';
+attractions.innerHTML = 'Attractions&nbsp;' + chevron.outerHTML;
+attractions.classList.add('dropdown-toggle');
 
-const bookNow = document.createElement('li');
-const bookNow_a = document.createElement('a');
-bookNow_a.href = '/book-now';
-bookNow_a.innerHTML = 'Book Now';
+const attractions_dropdown = document.createElement('div');
+attractions_dropdown.classList.add('dropdown');
+const atv = document.createElement('a');
+atv.innerHTML = 'ATV';
+atv.href = '/attractions/atv';
+const hiking = document.createElement('a');
+hiking.innerHTML = 'Hiking';
+hiking.href = '/attractions/hiking';
+const rock_climbing = document.createElement('a');
+rock_climbing.innerHTML = 'Rock Climbing';
+rock_climbing.href = '/attractions/rock-climbing';
+const snowmobiling = document.createElement('a');
+snowmobiling.innerHTML = 'Snowmobiling';
+snowmobiling.href = '/attractions/snowmobiling';
+const mtb = document.createElement('a');
+mtb.innerHTML = 'Mtn Biking';
+mtb.href = '/attractions/mtb';
+const hist = document.createElement('a');
+hist.innerHTML = 'History';
+hist.href = '/attractions/history';
+const sightseeing = document.createElement('a');
+sightseeing.innerHTML = 'Sightseeing';
+sightseeing.href = '/attractions/sightseeing';
+const other = document.createElement('a');
+other.innerHTML = 'Other';
+other.href = '/attractions/other';
+
+const map = document.createElement('a');
+map.href = '/map';
+map.innerHTML = 'Map';
+
+const contact = document.createElement('a');
+contact.href = '/contact';
+contact.innerHTML = 'Contact';
+
+const bookNow = document.createElement('a');
+bookNow.id = 'book-now-nav';
+bookNow.href = '/book-now';
+bookNow.innerHTML = 'Book Now';
 
 body.prepend(navbar_container);
+navbar_container.appendChild(title);
+    title.appendChild(title_a);
+        title_a.appendChild(title_image);
 navbar_container.appendChild(navbar);
-navbar.appendChild(home);
-    home.appendChild(home_a);
-navbar.appendChild(aboutUs);
-    aboutUs.appendChild(aboutUs_a);
-navbar.appendChild(cabins);
-    cabins.appendChild(cabins_a);
-navbar.appendChild(gallery);
-    gallery.appendChild(gallery_a);
-navbar.appendChild(availability);
-    availability.appendChild(availability_a);
-navbar.appendChild(attractions);
-    attractions.appendChild(attractions_a);
-navbar.appendChild(map);
-    map.appendChild(map_a);
-navbar.appendChild(contact);
-    contact.appendChild(contact_a);
-navbar.appendChild(bookNow);
-    bookNow.appendChild(bookNow_a);
+    navbar.appendChild(home);
+    navbar.appendChild(aboutUs);
+    navbar.appendChild(cabins);
+        cabins.appendChild(cabins_dropdown);
+            cabins_dropdown.appendChild(main_cabin);
+            cabins_dropdown.appendChild(guest_cabin);
+            cabins_dropdown.appendChild(events);
+    navbar.appendChild(gallery);
+    navbar.appendChild(availability);
+    navbar.appendChild(attractions);
+        attractions.appendChild(attractions_dropdown);
+            attractions_dropdown.appendChild(atv);
+            attractions_dropdown.appendChild(hiking);
+            attractions_dropdown.appendChild(rock_climbing);
+            attractions_dropdown.appendChild(snowmobiling);
+            attractions_dropdown.appendChild(mtb);
+            attractions_dropdown.appendChild(hist);
+            attractions_dropdown.appendChild(sightseeing);
+            attractions_dropdown.appendChild(other);
+    navbar.appendChild(map);
+    navbar.appendChild(contact);
+    navbar.appendChild(bookNow);
