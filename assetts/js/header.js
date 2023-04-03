@@ -1,4 +1,3 @@
-const body = document.body;
 const navbar_container = document.createElement('header');
 
 const title = document.createElement('div');
@@ -88,10 +87,10 @@ contact.innerHTML = 'Contact';
 
 const bookNow = document.createElement('a');
 bookNow.id = 'book-now-nav';
-bookNow.href = '/book-now';
+bookNow.href = '/booking';
 bookNow.innerHTML = 'Book Now';
 
-body.prepend(navbar_container);
+document.body.prepend(navbar_container);
 navbar_container.appendChild(title);
     title.appendChild(title_a);
         title_a.appendChild(title_image);

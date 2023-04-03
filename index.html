@@ -5,11 +5,153 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/assetts/css/styles.css">
+    <link rel="stylesheet" href="/assetts/css/styles.css" type="text/css"/>
+    <link rel="stylesheet" href="/assetts/css/daterangepicker.css" type="text/css"/>
 
-    <script src="/assetts/js/header.js" async></script>
+    <script src="/assetts/js/jquery.min.js" defer></script>
+    <script src="/assetts/js/moment.min.js" defer></script>
+    <script src="/assetts/js/daterangepicker.min.js" defer></script>
+    <script src="/assetts/js/jquery.cycle2.min.js" defer></script>
+    <script src="index.js" defer></script>
+
+
     <title>Sheldon R Larson Ranch</title>
 </head>
 <body>
+    <script src="/assetts/js/header.js"></script>
+
+    <div class="homepage-image">
+        <img src="/assetts/images/001.jpg" alt="Image of cabins"/>
+    </div>
+
+    <div class="form-container">
+        <form class="booking-form" id="booking-form" action="/booking/index.html" method="GET">
+            <!--Drop Down Cabin Select Menu-->
+            <select id="cabin-select" class="homepage-cabin-select" name="selectCabin">
+                <option value="main-cabin">Main Cabin</option>
+                <option value="guest-cabin">Guest Cabin</option>
+                <option value="both-cabins">Both Cabins</option>
+            </select>
+            <!--Calendar Date Selection-->
+            <input id="date-selector" class="homepage-date-selector" type="text" name="daterange" placeholder="Arrival - Departure" readonly="readonly"/>
+            <!--Submit/Book Now Button-->
+            <button type="submit" class="homepage-booking-btn" id="homepageBookingBtn">Book Now</button>
+        </form>
+    </div>
+
+    
+    <div class="overview-section1">
+            
+        <div class="overview-text-container">
+            <div>
+                <h1>Welcome to the<br>Sheldon R. Larson Ranch</h1><br>
+                <p>The Sheldon R. Larson Ranch is located minutes from the famous Arapeen trail system, with world-class ATVing, snowmobiling, hiking, rock climbing, and more! 
+                <br><br>This working ranch is located in the heart of the Sanpete Valley, three miles west of Ephraim, Utah, with easy access to mountains on the east and west.
+                <br><br>Great for both summer and winter enthusiasts looking for a classic and fun cabin experience with easy access to world-class outdoors!</p>
+            </div>
+        </div>
+
+        <div class="cycle-slideshow slideshow-container-right" >
+            <img class="overview-image-carousel-img" src="/assetts/images/020.jpg" alt="handcrafted front gate">
+        </div>
+    </div>
+
+    <div class="overview-section2">
+         
+        <div class="cycle-slideshow slideshow-container-left" 
+            data-cycle-timeout="5000"
+            data-cycle-swipe=true>
+            <span class="cycle-pager overview-pager"></span>
+
+            <img class="overview-image-carousel-img" src="/assetts/images/053.jpg" alt="four-wheeling in the arapeen trails">
+            <img class="overview-image-carousel-img" src="/assetts/images/072.jpg" alt="Snowmobiling in Ephraim">
+            <img class="overview-image-carousel-img" src="/assetts/images/068.jpg" alt="Maple canyon rock climbing">
+            <img class="overview-image-carousel-img" src="/assetts/images/070.jpg" alt="Mt. nebo scenic loop">
+        </div>
+        
+        <div class="overview-text-container">
+            <div>
+                <h1>The Great Outdoors</h1><br>
+                <p>Imagine a quiet peaceful night by the fire, gazing at the stars from the front porch of your country cabin, all after a day of four-wheeling, snowmobiling, or hiking through arguably the prettiest mountain range in the country.
+                <br><br>Our cabins are the gateway to the Manti-La Sal National Forest, Maple Canyon, Arapeen trail system, and more! Ephraim is also an ATV-friendly town, meaning you can cruise through town on your ATV!
+                <br><br>Bring your horses, ATVs, RVs, snowmobiles, or whatever else you need, we have plenty of room for you to park them. Although, with how close you will be to everything, we bet your toys won't spend much time parked!</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="overview-section1">
+        <div class="overview-text-container">
+            <div>
+                <h1>Country Cabins</h1><br>
+                <p>These country cabins are adjacent to Sheldon R. Larson Ranch, which is a working ranch and has been since 1854! As such, there is a small country town atmosphere around the cabins
+                <br><br>There is a large lawn area for games, activities, tent camping, etc. You'll also find an outdoor fire pit, patio, balcony, barbecue grill, horseshoe pit, and more!
+                <br><br>Inside the cabins you'll feel right at home and ready to settle in. Both cabins have a loft-style second floor that opens up into the main living area, a full kitchen, bathroom with shower, and many more amenities you may need during your stay.</p>
+            </div>
+        </div>
+        
+        <div class="cycle-slideshow slideshow-container-right">
+            <img class="overview-image-carousel-img" src="/assetts/images/004.jpg" alt="Main and Guest cabins">
+        </div>
+        
+    </div>
+
+    <div class="overview-section2">
+        
+        <div class="cycle-slideshow slideshow-container-left" 
+            data-cycle-timeout="5000"
+            data-cycle-swipe=true>
+            <span class="cycle-pager overview-pager"></span>
+
+            <img class="overview-image-carousel-img" src="/assetts/images/047.jpg" alt="Spring city historic homes">
+            <img class="overview-image-carousel-img" src="/assetts/images/060.jpg" alt="Columbian mammoth">
+            <img class="overview-image-carousel-img" src="/assetts/images/046.jpg" alt="Spring city historic homes">
+            <img class="overview-image-carousel-img" src="/assetts/images/041.jpg" alt="John Deere tractor">
+        </div>
+        
+        <div class="overview-text-container">
+            <div>
+                <h1>History</h1><br>
+                <p>Step back 100 years to a simpler time and place. This working ranch is the homestead of Lewis Larsen, one of the original pioneers to arrive in Ephraim in 1854, and has been in the family every since.
+                <br><br>Sanpete's Heritage is prevalent today with many rock homes and buildings built in the 1800's. Native American sites, pioneer homesteads, historic buildings, and cultural sites draw history and culture buffs to this area.
+                <br><br>A nearly fully intact Columbian Mammoth unearthed only miles away, the small historic town of Spring City, Chief Blackhawk Massacre monument, and Manti Temple are just a few of the many historical sites scattered throughout our history-rich valley.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="overview-section1">
+        <div class="overview-text-container">
+            <div>
+                <h1>Meet Your Hosts</h1><br>
+                <p>Jon and Teresa Larson
+                <br><br>Proud to be part of the Larson heritage, Jon was born and raised in Ephraim, UT and knows the area better than anyone! 
+                <br><br>Jon was raised working on this same ranch and rode bucking bulls nationally in his "younger" years. He has since retired and pursues that same passion on the ranch raising his own herd of rodeo bucking bulls.
+                <br><br>Teresa was raised in Northern Utah and has lived in Ephraim since 1994! She teaches special education at the local middle school and previously ran her own preschool for 14 years.
+                <br><br>As always, please feel free to ask us any questions during your stay here! We're more than happy to help!</p>
+            </div>
+        </div>
+
+        <div class="cycle-slideshow slideshow-container-right overview-hosts-image">
+            <img class="overview-image-carousel-img" src="/assetts/images/host_2.jpg" alt="photo of hosts">
+        </div>
+    </div>
+
+
+    <div class="picture-section">
+
+        <div class="overview-overlay-container">
+            <a href="cabinOverview.html"><div class="overview-overlay"><p>Country<br>Cabins</p><p class="overview-overlay-underline"></p></div></a>
+            <a href="attractions.html"><div class="overview-overlay"><p>Great<br>Outdoors</p><p class="overview-overlay-underline"></p></div></a>
+            <a href="sightseeing.html"><div class="overview-overlay"><p>Panoramic<br>Views</p><p class="overview-overlay-underline"></p></div></a>
+            <a href="history.html"><div class="overview-overlay"><p>Rich<br>History</p><p class="overview-overlay-underline"></p></div></a>
+        </div>
+        
+        <img src="/assetts/images/002.jpg" alt="Main cabin">
+        <img src="/assetts/images/075.jpg" alt="four-wheeling">
+        <img src="/assetts/images/062.jpg" alt="aspen trees">
+        <img src="/assetts/images/060.jpg" alt="columbian mammoth">
+    </div> 
+
 </body>
 </html>
