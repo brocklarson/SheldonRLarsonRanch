@@ -1,5 +1,4 @@
-
-const today = new Date(); //Gets today
+const today = new Date(); 
 const nextWeek = new Date(today.getTime() + 7*24*60*60*1000); //Gets the date in one week from today
 
 $(function() { //Function for the dateRangePicker

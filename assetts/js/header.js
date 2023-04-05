@@ -16,14 +16,14 @@ const home = document.createElement('a');
 home.href = '/';
 home.innerHTML = 'Home';
 
-const aboutUs = document.createElement('a');
-aboutUs.href = '/about-us';
-aboutUs.innerHTML = 'About Us';
-
 const cabins = document.createElement('a');
 cabins.href = '/cabins';
 cabins.innerHTML = 'Cabins&nbsp;' + chevron.outerHTML;
 cabins.classList.add('dropdown-toggle');
+
+const events = document.createElement('a');
+events.href = '/events';
+events.innerHTML = 'Events';
 
 const cabins_dropdown = document.createElement('div');
 cabins_dropdown.classList.add('dropdown');
@@ -33,9 +33,6 @@ main_cabin.href = '/cabins/main-cabin';
 const guest_cabin = document.createElement('a');
 guest_cabin.innerHTML = 'Guest Cabin';
 guest_cabin.href = '/cabins/guest-cabin';
-const events = document.createElement('a');
-events.innerHTML = 'Events';
-events.href = '/cabins/events';
 
 const gallery = document.createElement('a');
 gallery.href = '/gallery';
@@ -96,12 +93,11 @@ navbar_container.appendChild(title);
         title_a.appendChild(title_image);
 navbar_container.appendChild(navbar);
     navbar.appendChild(home);
-    navbar.appendChild(aboutUs);
     navbar.appendChild(cabins);
         cabins.appendChild(cabins_dropdown);
             cabins_dropdown.appendChild(main_cabin);
             cabins_dropdown.appendChild(guest_cabin);
-            cabins_dropdown.appendChild(events);
+    navbar.appendChild(events);
     navbar.appendChild(gallery);
     navbar.appendChild(availability);
     navbar.appendChild(attractions);
