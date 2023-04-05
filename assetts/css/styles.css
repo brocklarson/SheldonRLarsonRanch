@@ -193,7 +193,7 @@ header{
     height: 50%;
     background-color: white;
     border-radius: 5px;
-    padding: 0 10px;
+    padding-left: 10px;
     cursor: pointer;
 }
 
@@ -203,6 +203,10 @@ header{
 
 .homepage-date-selector{
     margin: 0 20px;
+    background: url(/assetts/icons/calendar.png) no-repeat scroll right;
+    background-size: 30px 30px;
+    padding-right: 30px;
+    width: min-content;
 }
 
 .homepage-booking-btn{
