@@ -466,3 +466,39 @@ header{
     background-color: rgba(0,0,0,0.3);
     z-index: 13;
 }
+
+/* AVAILABILITY */
+
+.calendar-setup{
+    position: fixed;
+    top: 25%;
+    transform: translate(0%, -30%);
+    z-index: 9;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    margin-top: 60px;
+}
+
+.calendar-setup iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.main-calendar{
+    width: 45vw;
+    height: 40vw;
+    margin: 40px 0px;
+    float: left;
+    padding: 0;
+    padding-left: 3vw;
+}
+
+.guest-calendar{
+    width: 45vw;
+    height: 40vw;
+    margin: 40px 0px;
+    float: right;
+    padding: 0;
+    padding-right: 3vw;
+}
