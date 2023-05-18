@@ -101,7 +101,7 @@ header{
     margin: 0;
     padding: 12px 0 8px 0;
     position: absolute;
-    z-index: 5;
+    z-index: 20;
 }
 
 .dropdown-toggle:hover .dropdown,
@@ -502,3 +502,191 @@ header{
     padding: 0;
     padding-right: 3vw;
 }
+
+/* CABIN OVERVIEW */
+/* FONT AWESOME ICONS *//*https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css*//*https://cdnjs.com/libraries/font-awesome*/
+.fa,.fab,.fal,.far,.fas{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1}.fa-lg{font-size:1.33333em;line-height:.75em;vertical-align:-.0667em}@font-face{font-family: "Font Awesome 5 Brands";font-style:normal;font-weight:normal;font-display:auto;src:url(/assetts/webfonts/fa-brands-400.eot);src:url(/assetts/webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),url(/assetts/webfonts/fa-brands-400.woff2) format("woff2"),url(/assetts/webfonts/fa-brands-400.woff) format("woff"),url(/assetts/webfonts/fa-brands-400.ttf) format("truetype"),url(/assetts/webfonts/fa-brands-400.svg#fontawesome) format("svg")}.fab{font-family: "Font Awesome 5 Brands"}@font-face{font-family: "Font Awesome 5 Free";font-style:normal;font-weight:400;font-display:auto;src:url(/assetts/webfonts/fa-regular-400.eot);src:url(/assetts/webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),url(/assetts/webfonts/fa-regular-400.woff2) format("woff2"),url(/assetts/webfonts/fa-regular-400.woff) format("woff"),url(/assetts/webfonts/fa-regular-400.ttf) format("truetype"),url(/assetts/webfonts/fa-regular-400.svg#fontawesome) format("svg")}.far{font-weight:400}@font-face{font-family: "Font Awesome 5 Free";font-style:normal;font-weight:900;font-display:auto;src:url(/assetts/webfonts/fa-solid-900.eot);src:url(/assetts/webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),url(/assetts/webfonts/fa-solid-900.woff2) format("woff2"),url(/assetts/webfonts/fa-solid-900.woff) format("woff"),url(/assetts/webfonts/fa-solid-900.ttf) format("truetype"),url(/assetts/webfonts/fa-solid-900.svg#fontawesome) format("svg")}.fa,.far,.fas{font-family: "Font Awesome 5 Free"}.fa,.fas{font-weight:900}.fa-bars:before{content:"\f0c9"}.fa-times:before{content:"\f00d"}.fa-envelope:before{content:"\f0e0"}.fa-phone:before{content:"\f095"}.fa-map-marker-alt:before{content:"\f3c5"}.fa-user-friends:before{content:"\f500"}.fa-user:before{content:"\f007"}.fa-bed:before{content:"\f236"}.fa-bath:before{content:"\f2cd"}.fa-car:before{content:"\f1b9"}.fa-paw:before{content:"\f1b0"}.fa-shower:before{content:"\f2cc"}.fa-check-circle:before{content:"\f058"}.fa-circle:before{content:"\f111"}.fa-moon:before{content:"\f186"}.fa-home:before{content:"\f015"}.fa-calendar-alt:before{content:"\f073"}.fa-envelope:before{content:"\f0e0"}.fa-mountain:before{content:"\f6fc"}.fa-route:before{content:"\f4d7"}.fa-star:before{content:"\f005"}.fa-chevron-down:before{content:"\f078"}.fa-comment:before{content:"\f075"}.fa-home:before{content:"\f015"}
+
+.overview-container{
+    background-color: #fff;
+    width: 80vw;
+    height: auto;
+    margin: 60px auto 0 auto;
+    box-sizing: border-box;
+    padding-bottom: 16px;
+}
+
+.cabins-overview-container{
+    height: 200px;
+    width: 95%;
+    width: calc(100% - 32px);
+    margin: 16px auto 16px auto;
+    box-shadow: 0 8px 22px 0 rgba(0,0,0,.07);
+}
+
+.cabins-overview-image{
+    width: 33%;
+    height: 100%;
+    overflow: hidden;
+    float: left;
+    padding: 0 25px;
+    margin: 0 14px 0 0;
+    background-color: #f3f3f3; 
+}
+
+.cabins-overview-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cabins-overview-text{
+    width: 50%;
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cabins-overview-text h3{
+    font-family: var(--default-font-family);
+    font-size: 1.5em;
+    margin: 8px 8px;
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+}
+
+.cabins-overview-text p{
+    font-family: var(--default-font-family);
+    font-size: 1em;
+    margin: 8px 8px;
+    padding: 0;
+    line-height: 18px;
+}
+
+.cabins-overview-text a{
+    text-decoration: none;
+    color: black;
+}
+
+.cabin-overview-icon{
+    width: 10px;
+    color: #555;
+    padding: 0;
+    margin: 0 6px 0 0;
+}
+
+.cabin-overview-icon-right{
+    width: 25px;
+}
+
+.fridge-icon{
+    margin: 0 7px 0 -5px;
+    padding: 0;
+}
+
+.cabins-overview-info{
+    display: flex;
+    flex-direction: row;
+}
+
+.cabin-overview-text-section1,
+.cabin-overview-text-section2{
+    width: 40%;
+    height: auto;
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+
+.more-info-text-container{
+    height: min-content;
+    width: max-content;
+}
+
+.more-info-text-container p{
+    color: var(--accent-color);
+    filter: brightness(95%);
+    font-size: 1em;
+}
+
+
+
+/*
+.overview-container h1{
+    font-family: var(--secondary-font-family);     
+    letter-spacing: 0.05em;
+    padding: 16px 16px 8px 16px;
+}
+
+.overview-container h2{
+    font-family: var(--default-font-family);
+    padding: 16px 16px 8px 16px;
+}
+
+.overview-container ul{
+    font-family: var(--default-font-family);
+    padding: 0px 16px 8px 32px;
+}
+
+.overview-container ul li{
+    font-family: var(--default-font-family);
+    padding: 4px 0 0 0;
+}
+
+.overview-container a{
+    color: blue;
+}
+
+.overview-container p{
+    padding: 8px 16px;
+    font-family: var(--default-font-family);
+    font-size: 1em;
+    line-height: 2em;
+}
+
+
+
+.cabin-overview-cabins-price{
+    width: 24%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    border: solid 1px #555;
+    border-left: none;
+}
+
+.cabin-overview-cabins-price h3, .cabin-overview-cabins-price p{
+    display: inline;
+    font-family: var(--default-font-family);
+    padding: 0;
+    margin: 0;
+}
+
+.cabin-overview-cabins-price p{
+    display: block;
+    font-size: 18px;
+}
+
+.cabin-overview-cabins-price a{
+    text-decoration: underline;
+    color: black;
+}
+
+.cabin-overview-cabins-price a:hover{
+    color: var(--other-accent);
+    transition: 0.5s;
+}
+
+.the-nightly-price, .the-weekly-price{
+    font-size: 28px;
+    font-weight: bold;
+    color: #555;
+}
+
+.center-cabins-price{
+    padding-top: 30px;
+}
+*/
