@@ -517,11 +517,13 @@ header{
 }
 
 .cabins-overview-container{
-    height: 200px;
+    height: 225px;
     width: 95%;
     width: calc(100% - 32px);
     margin: 16px auto 16px auto;
     box-shadow: 0 8px 22px 0 rgba(0,0,0,.07);
+    display: flex;
+    flex-direction: row;
 }
 
 .cabins-overview-image{
@@ -612,81 +614,28 @@ header{
     font-size: 1em;
 }
 
-
-
-/*
-.overview-container h1{
-    font-family: var(--secondary-font-family);     
-    letter-spacing: 0.05em;
-    padding: 16px 16px 8px 16px;
-}
-
-.overview-container h2{
-    font-family: var(--default-font-family);
-    padding: 16px 16px 8px 16px;
-}
-
-.overview-container ul{
-    font-family: var(--default-font-family);
-    padding: 0px 16px 8px 32px;
-}
-
-.overview-container ul li{
-    font-family: var(--default-font-family);
-    padding: 4px 0 0 0;
-}
-
-.overview-container a{
-    color: blue;
-}
-
-.overview-container p{
-    padding: 8px 16px;
-    font-family: var(--default-font-family);
-    font-size: 1em;
-    line-height: 2em;
-}
-
-
-
-.cabin-overview-cabins-price{
-    width: 24%;
+.cabins-overview-price{
     height: 100%;
+    width: 33%;
     float: left;
     text-align: center;
-    border: solid 1px #555;
-    border-left: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.cabin-overview-cabins-price h3, .cabin-overview-cabins-price p{
+.cabins-overview-price p{
     display: inline;
     font-family: var(--default-font-family);
     padding: 0;
-    margin: 0;
-}
-
-.cabin-overview-cabins-price p{
+    margin: 16px 0;
     display: block;
     font-size: 18px;
 }
 
-.cabin-overview-cabins-price a{
-    text-decoration: underline;
-    color: black;
-}
-
-.cabin-overview-cabins-price a:hover{
-    color: var(--other-accent);
-    transition: 0.5s;
-}
-
-.the-nightly-price, .the-weekly-price{
+.cabins-overview-price span{
     font-size: 28px;
     font-weight: bold;
     color: #555;
 }
-
-.center-cabins-price{
-    padding-top: 30px;
-}
-*/
