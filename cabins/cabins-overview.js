@@ -1,23 +1,4 @@
-class Cabins{
-    constructor(name, location, people, beds, baths, kitchen, parking, pets, night_price, week_price, img, link){
-       this.name = name; 
-       this.location = location;
-       this.people = people;
-       this.beds = beds;
-       this.baths = baths;
-       this.kitchen = kitchen;
-       this.parking = parking;
-       this.pets = pets;
-       this.night_price = night_price;
-       this.week_price = week_price;
-       this.img = img;
-       this.link = link;
-    }
-}
-
-const mainCabin = new Cabins("Main Cabin", "Ephraim, UT", 6, 4, 1, "Full Kitchen", "Off-Street Parking", "Pets Allowed*", 129, 775, "/assetts/images/Main-Cabin/001.jpg", "./main-cabin");
-const guestCabin = new Cabins("Guest Cabin", "Ephraim, UT", 4, 2, 1, "Full Kitchen", "Off-Street Parking", "Pets Allowed*", 99, 600, "/assetts/images/Guest-Cabin/001.jpg" ,"./guest-cabin");
-const bothCabins = new Cabins("Both Cabins Discount", "Ephraim, UT", 10, 6, 2, "Full Kitchen", "Off-Street Parking", "Pets Allowed*", 200, 1200, "/assetts/images/Courtyard/001.jpg", "./main-cabin");
+import { mainCabin, guestCabin, bothCabins } from "./cabin-class.js";
 
 const createUI = (cabinObj) => {
     const container = document.querySelector(".overview-container");
@@ -36,7 +17,8 @@ const createUI = (cabinObj) => {
         imgAnchor.href = cabin.link;
 
         const img = document.createElement('img');
-        img.src = cabin.img;
+        img.src = cabin.mainImg.src;
+        img.alt = cabin.mainImg.alt;
 
 
         //Text Section
@@ -160,3 +142,5 @@ const createUI = (cabinObj) => {
 };
 
 createUI(mainCabin);
+createUI(guestCabin);
+createUI(bothCabins);

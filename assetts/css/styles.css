@@ -543,8 +543,8 @@ header{
 }
 
 .cabins-overview-text{
-    width: 50%;
     height: 100%;
+    width: 50%;
     float: left;
     display: flex;
     flex-direction: column;
@@ -616,7 +616,7 @@ header{
 
 .cabins-overview-price{
     height: 100%;
-    width: 33%;
+    width: 20%;
     float: left;
     text-align: center;
     display: flex;
@@ -639,3 +639,163 @@ header{
     font-weight: bold;
     color: #555;
 }
+
+/* CABIN DETAILS */
+
+
+.cabin-overview-icon-container{
+    height: 50px;
+    padding: 0;
+    margin: 10px 2% 0 2%;
+}
+
+.cabin-overview-icon-container p{
+    display: block;
+    float: left;
+    width: auto;
+}
+
+.cabin-short{
+    padding: 0 20px !important;
+}
+
+.cabin-image-carousel-container{
+    margin: 0px 2% 0px 2%;
+    padding: 0;
+    width: 67vw;
+    height: 51vw;
+    max-height: 88vh;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 5px;
+    background-color: #000;
+}
+
+.cabin-image-carousel-img{
+    height: 100%;
+    width: auto;
+}
+
+.cabin-image-carousel-prev, .cabin-image-carousel-next{
+    width: 30px;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 44%;
+    cursor: pointer;
+    z-index: 101;
+    text-align: center;
+    font-size: 200%;
+    color: #fff;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.cabin-image-carousel-prev{
+    left: 1%;
+}
+
+.cabin-image-carousel-next{
+    right: 1%;
+}
+
+.cabin-image-caption{
+    display: block;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    font-size: 16px;
+    z-index: 101;
+    margin: 0 1% 1% 0;
+    padding: 2px 2px;
+    color: white;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 4px;
+}
+
+.cabin-page-navigator{
+    display: inline-block;
+    position: sticky;
+    top: 0px;
+    width: 95%;
+    margin: 0 16px 0 16px;
+    padding: 10px 0 0 0;
+    background-color: white;
+    border-bottom: solid 1px #555;
+}
+
+.cabin-page-navigator a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #555;
+}
+
+.cabin-page-navigator p{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0;
+    padding: 0 3px 5px 10px;
+}
+
+.cabin-description-text-area{
+    width: 95%;
+    margin: 0 16px;
+    padding: 0;
+    color: #555;
+    font-family: var(--default-font-family);
+}
+
+.cabin-description-text-area h2{
+    font-family: var(--secondary-font-family);     
+    letter-spacing: 0.05em;
+    margin: 20px 16px 10px 0;
+    padding: 5px 0;
+    width: 100%;
+    border-bottom: solid 1px #555;
+}
+
+.cabin-description-text-area h4{
+    padding: 0px 0px 0px 10px;
+    margin: 0 16px 0 0;
+}
+
+.cabin-description-text-area p{
+    padding: 10px 16px 10px 10px;
+    margin: 0 0 0 0;
+    line-height: 1.3;
+    word-wrap: break-word;
+}
+
+.amenities-container{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 16px 0 0;
+    padding: 0;
+}
+
+.amenities{
+    display: inline-block;
+    width: 275px;
+    margin: 0;
+    padding: 0 16px 0 0;
+}
+
+.rates-table{
+    font-family: var(--default-font-family);
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.rates-table td, .rates-table th{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.rates-table tr:nth-child(even) {
+    background-color: #eee;
+  }
+.rates-table tr:nth-child(odd) {
+    background-color: #fff;
+  }
