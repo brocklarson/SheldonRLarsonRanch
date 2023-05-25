@@ -503,7 +503,7 @@ header{
     padding-right: 3vw;
 }
 
-/* CABIN OVERVIEW */
+/* CABIN OVERVIEW & ATTRACTIONS OVERVIEW */
 /* FONT AWESOME ICONS *//*https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css*//*https://cdnjs.com/libraries/font-awesome*/
 .fa,.fab,.fal,.far,.fas{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1}.fa-lg{font-size:1.33333em;line-height:.75em;vertical-align:-.0667em}@font-face{font-family: "Font Awesome 5 Brands";font-style:normal;font-weight:normal;font-display:auto;src:url(/assetts/webfonts/fa-brands-400.eot);src:url(/assetts/webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),url(/assetts/webfonts/fa-brands-400.woff2) format("woff2"),url(/assetts/webfonts/fa-brands-400.woff) format("woff"),url(/assetts/webfonts/fa-brands-400.ttf) format("truetype"),url(/assetts/webfonts/fa-brands-400.svg#fontawesome) format("svg")}.fab{font-family: "Font Awesome 5 Brands"}@font-face{font-family: "Font Awesome 5 Free";font-style:normal;font-weight:400;font-display:auto;src:url(/assetts/webfonts/fa-regular-400.eot);src:url(/assetts/webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),url(/assetts/webfonts/fa-regular-400.woff2) format("woff2"),url(/assetts/webfonts/fa-regular-400.woff) format("woff"),url(/assetts/webfonts/fa-regular-400.ttf) format("truetype"),url(/assetts/webfonts/fa-regular-400.svg#fontawesome) format("svg")}.far{font-weight:400}@font-face{font-family: "Font Awesome 5 Free";font-style:normal;font-weight:900;font-display:auto;src:url(/assetts/webfonts/fa-solid-900.eot);src:url(/assetts/webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),url(/assetts/webfonts/fa-solid-900.woff2) format("woff2"),url(/assetts/webfonts/fa-solid-900.woff) format("woff"),url(/assetts/webfonts/fa-solid-900.ttf) format("truetype"),url(/assetts/webfonts/fa-solid-900.svg#fontawesome) format("svg")}.fa,.far,.fas{font-family: "Font Awesome 5 Free"}.fa,.fas{font-weight:900}.fa-bars:before{content:"\f0c9"}.fa-times:before{content:"\f00d"}.fa-envelope:before{content:"\f0e0"}.fa-phone:before{content:"\f095"}.fa-map-marker-alt:before{content:"\f3c5"}.fa-user-friends:before{content:"\f500"}.fa-user:before{content:"\f007"}.fa-bed:before{content:"\f236"}.fa-bath:before{content:"\f2cd"}.fa-car:before{content:"\f1b9"}.fa-paw:before{content:"\f1b0"}.fa-shower:before{content:"\f2cc"}.fa-check-circle:before{content:"\f058"}.fa-circle:before{content:"\f111"}.fa-moon:before{content:"\f186"}.fa-home:before{content:"\f015"}.fa-calendar-alt:before{content:"\f073"}.fa-envelope:before{content:"\f0e0"}.fa-mountain:before{content:"\f6fc"}.fa-route:before{content:"\f4d7"}.fa-star:before{content:"\f005"}.fa-chevron-down:before{content:"\f078"}.fa-comment:before{content:"\f075"}.fa-home:before{content:"\f015"}
 
@@ -516,7 +516,7 @@ header{
     padding-bottom: 16px;
 }
 
-.cabins-overview-container{
+.cabins-overview-container, .attractions-overview-container{
     height: 225px;
     width: 95%;
     width: calc(100% - 32px);
@@ -526,7 +526,7 @@ header{
     flex-direction: row;
 }
 
-.cabins-overview-image{
+.cabins-overview-image, .attractions-overview-image{
     width: 33%;
     height: 100%;
     overflow: hidden;
@@ -536,13 +536,13 @@ header{
     background-color: #f3f3f3; 
 }
 
-.cabins-overview-image img{
+.cabins-overview-image img, .attractions-overview-image img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.cabins-overview-text{
+.cabins-overview-text, .attractions-overview-text{
     height: 100%;
     width: 50%;
     float: left;
@@ -551,7 +551,11 @@ header{
     justify-content: space-between;
 }
 
-.cabins-overview-text h3{
+.attractions-overview-text{
+    width: 63%
+}
+
+.cabins-overview-text h3, .attractions-overview-text h3{
     font-family: var(--default-font-family);
     font-size: 1.5em;
     margin: 8px 8px;
@@ -560,7 +564,7 @@ header{
     font-weight: bold;
 }
 
-.cabins-overview-text p{
+.cabins-overview-text p, .attractions-overview-text p{
     font-family: var(--default-font-family);
     font-size: 1em;
     margin: 8px 8px;
@@ -568,7 +572,13 @@ header{
     line-height: 18px;
 }
 
-.cabins-overview-text a{
+.attractions-overview-text p {
+    font-size: 1.2em;
+    line-height: 24px;
+    font-weight: normal;
+}
+
+.cabins-overview-text a, .attractions-overview-text a{
     text-decoration: none;
     color: black;
 }
@@ -610,7 +620,7 @@ header{
 
 .more-info-text-container p{
     color: var(--accent-color);
-    filter: brightness(95%);
+    filter: brightness(90%);
     font-size: 1em;
 }
 
