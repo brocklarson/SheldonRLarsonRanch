@@ -49,14 +49,16 @@ let imgs = [
     {src: "/assetts/images/Main-Cabin/008.jpg", alt: "Main cabin loft"},
     {src: "/assetts/images/Main-Cabin/009.jpg", alt: "Main cabin desk area"},
     {src: "/assetts/images/Main-Cabin/011.jpg", alt: "Main cabin heirloom"},
-    {src: "/assetts/images/Courtyard/002.jpg", alt: "Back area behind cabin"},
+    {src: "/assetts/images/Courtyard/002.jpg", alt: "Back area behind cabins"},
     {src: "/assetts/images/Courtyard/003.jpg", alt: "Backyard behind cabins"},
     {src: "/assetts/images/Main-Cabin/012.jpg", alt: "Main cabin heirloom"},
     {src: "/assetts/images/Main-Cabin/013.jpg", alt: "Main cabin heirloom"},
     {src: "/assetts/images/Main-Cabin/014.jpg", alt: "Main cabin heirloom"},
     {src: "/assetts/images/Main-Cabin/015.jpg", alt: "Main cabin heirloom"},
     {src: "/assetts/images/Courtyard/006.jpg", alt: "Utah century farm & ranch homestead"},
-    {src: "/assetts/images/Ranch/001.jpg", alt: "View of ranch"}
+    {src: "/assetts/images/Ranch/001.jpg", alt: "View of ranch"},
+    {src: "/assetts/images/Main-Cabin/010.jpg", alt: "Guest book"},
+
 ];
 let tagline = "Plenty of room for the entire family in this Country Cabin rental!";
 const mainCabin = new Cabins(cabinName, location, people, beds, baths, kitchen, parking, pets, night_price, week_price, mainImg, link, description, amenities, imgs, tagline);
@@ -78,7 +80,27 @@ description = `<p>The guest cabin has a studio style setup on the ground floor. 
 <p>Enjoy quiet peaceful nights on the patio next to the firepit after a day of four-wheeling, snowmobiling, hiking, fishing, horseback riding or sightseeing in the nearby Manti-La Sal National Forest. Experience easy access to the hundreds of ATV trails in the Arapeen trail system accessible from your front doorstep.</p>
 <p>Conveniently located near Ephraim and Manti, it is the gateway to the Manti-La Sal National Forest and other local attractions for both outdoor adventurists and those who want to enjoy the many quaint historical sites the Sanpete Valley has to offer.</p>`;
 amenities = ["A/C", "Washer/Dryer", "Fridge/Freezer", "Oven/Stove", "Dishwasher", "Microwave", "Kitchenware", "Coffee Maker", "Gas BBQ Grill", "Master Bedroom: 1 Queen", "Loft: 2 Queens, 1 Crib", "Linens", "Shower", "Balcony Access", "Outdoor Firepit/Wood", "Board Games", "Horshoe Pit", "Rv/Vehicle Parking", "Courtyard Seating Area", "Wheelchair Accessible Entrance", "Satellite TV", "Fire Extinguisher"];
-imgs = [];
+imgs = [
+    {src: "/assetts/images/Guest-Cabin/001.jpg", alt: "Guest cabin"},
+    {src: "/assetts/images/Courtyard/001.jpg", alt: "View of cabins from courtyard"},
+    {src: "/assetts/images/Guest-Cabin/002.jpg", alt: "Guest cabin"},
+    {src: "/assetts/images/Guest-Cabin/003.jpg", alt: "Guest cabin living room"},
+    {src: "/assetts/images/Guest-Cabin/004.jpg", alt: "Guest cabin living room"},
+    {src: "/assetts/images/Guest-Cabin/005.jpg", alt: "Guest cabin bedroom"},
+    {src: "/assetts/images/Guest-Cabin/006.jpg", alt: "Guest cabin kitchen"},
+    {src: "/assetts/images/Guest-Cabin/007.jpg", alt: "Guest cabin loft"},
+    {src: "/assetts/images/Guest-Cabin/008.jpg", alt: "Guest cabin loft access"},
+    {src: "/assetts/images/Guest-Cabin/009.jpg", alt: "Guest cabin bathroom"},
+    {src: "/assetts/images/Guest-Cabin/010.jpg", alt: "Guest cabin bathroom"},
+    {src: "/assetts/images/Courtyard/002.jpg", alt: "Back area behind cabins"},
+    {src: "/assetts/images/Courtyard/003.jpg", alt: "Backyard behind cabins"},
+    {src: "/assetts/images/Guest-Cabin/011.jpg", alt: "Guest cabin heirloom"},
+    {src: "/assetts/images/Guest-Cabin/012.jpg", alt: "Main cabin heirloom"},
+    {src: "/assetts/images/Guest-Cabin/013.jpg", alt: "Guest cabin heirloom"},
+    {src: "/assetts/images/Guest-Cabin/014.jpg", alt: "Guest cabin photo wall"},
+    {src: "/assetts/images/Courtyard/006.jpg", alt: "Utah century farm & ranch homestead"},
+    {src: "/assetts/images/Ranch/001.jpg", alt: "View of ranch"}
+];
 tagline = "A great getaway for a small family in this Country Cabin rental!";
 const guestCabin = new Cabins(cabinName, location, people, beds, baths, kitchen, parking, pets, night_price, week_price, mainImg, link, description, amenities, imgs, tagline);
 
