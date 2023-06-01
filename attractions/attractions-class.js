@@ -35,6 +35,7 @@ categoryName = "Hiking";
 categoryDescription = "With the Manti-Lasal Mountain Range next door, you have some of the best hiking trails in the Rocky Mountains! From waterfalls and panoramic views to deep forest canopies, there are plenty of hiking trails for all ages and skill levels!";
 categoryImg = {src: "/assetts/images/Activities/027.jpg", alt: "Maple canyon hike overlook"}
 categoryLink = "./hiking"
+overview = `<p>There are miles and miles of hiking trails throughout the gorgeous Wasatch Mountain Range. Whether it's to an arch, waterfall, or jaw-dropping panoramic views, there's a hike here for you! From easy to strenous and short to long, we've listed our top recommended hikes in the area! Read more about our recommended hikes below, or if you want more hikes, we recommend also looking at <a href="https://www.alltrails.com/explore?b_tl_lat=39.8992015115692&b_tl_lng=-112.88177490234375&b_br_lat=38.81403111409755&b_br_lng=-110.291748046875" target="_blank">all trails</a> or <a href="https://www.hikingproject.com/directory/8010492/salt-lake-city-and-wasatch-front" target="_blank">hiking project</a>.</p>`;
 const hiking = new AttractionCategory(categoryName, categoryDescription, categoryImg, categoryLink, overview);
 
 categoryName = "Rock Climbing";
