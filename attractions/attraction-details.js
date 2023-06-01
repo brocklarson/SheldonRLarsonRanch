@@ -1,8 +1,42 @@
-const createUI = (attractionsObj) => {
+const createUI = (attractionCategory) => {
     const container = document.querySelector(".overview-container");
-    const attraction = attractionsObj;
 
-    function createDOM(attraction){
+    function expandMenu(){
+        const overviewContainer = document.querySelector(".attractions-overview-info-text");
+        const moreInfo = document.querySelector(".attractions-overview-more-info p");
+
+        overviewContainer.classList.toggle("expand");
+        if(moreInfo.innerText === "More Info") moreInfo.innerText = "Less Info";
+        else moreInfo.innerText = "More Info";
+    }
+
+    function createAttractionsOverview(attraction){
+        const overview = document.createElement('div');
+        overview.classList.add('attractions-overview-info');
+
+        const title = document.createElement('h1');
+        title.innerText = attraction.name;
+
+        const info = document.createElement('div');
+        info.classList.add('attractions-overview-info-text');
+        info.innerHTML = attraction.overview;
+
+        const moreInfoTextContainer = document.createElement('div');
+        moreInfoTextContainer.classList.add('attractions-overview-more-info');
+
+        const moreInfoText = document.createElement('p');
+        moreInfoText.innerText = 'More Info';
+
+        container.appendChild(overview);
+        overview.appendChild(title);
+        overview.appendChild(info);
+        overview.appendChild(moreInfoTextContainer);
+        moreInfoTextContainer.appendChild(moreInfoText);
+
+        moreInfoTextContainer.addEventListener('click', expandMenu);
+    }
+
+    function createAttractionsDOM(attraction){
         const attractionOverview = document.createElement('div');
         attractionOverview.classList.add('attractions-overview-container');
 
@@ -13,6 +47,7 @@ const createUI = (attractionsObj) => {
 
         const imgAnchor = document.createElement('a');
         imgAnchor.href = attraction.link;
+        imgAnchor.target = "_blank";
 
         const img = document.createElement('img');
         img.src = attraction.img.src;
@@ -25,6 +60,7 @@ const createUI = (attractionsObj) => {
 
         const textAnchor = document.createElement('a');
         textAnchor.href = attraction.link;
+        textAnchor.target = "_blank";
 
         const attractionName = document.createElement('h3');
         attractionName.innerText = attraction.name;
@@ -40,6 +76,7 @@ const createUI = (attractionsObj) => {
 
         const moreInfoAnchor = document.createElement('a');
         moreInfoAnchor.href = attraction.link;
+        moreInfoAnchor.target = "_blank";
 
         const moreInfoText = document.createElement('p');
         moreInfoText.innerText = 'More Info';
@@ -56,11 +93,13 @@ const createUI = (attractionsObj) => {
             attractionText.appendChild(attractionDescription);
             attractionText.appendChild(moreInfoTextContainer);
                 moreInfoTextContainer.appendChild(moreInfoAnchor);
-                    moreInfoAnchor.appendChild(moreInfoText);
-           
+                    moreInfoAnchor.appendChild(moreInfoText); 
     }
 
-    createDOM(attraction);
+    createAttractionsOverview(attractionCategory);
+    attractionCategory.attractions.forEach(attraction => {
+        createAttractionsDOM(attraction);
+    });
 };
 
 export { createUI };

@@ -508,7 +508,6 @@ header{
 .fa,.fab,.fal,.far,.fas{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1}.fa-lg{font-size:1.33333em;line-height:.75em;vertical-align:-.0667em}@font-face{font-family: "Font Awesome 5 Brands";font-style:normal;font-weight:normal;font-display:auto;src:url(/assetts/webfonts/fa-brands-400.eot);src:url(/assetts/webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),url(/assetts/webfonts/fa-brands-400.woff2) format("woff2"),url(/assetts/webfonts/fa-brands-400.woff) format("woff"),url(/assetts/webfonts/fa-brands-400.ttf) format("truetype"),url(/assetts/webfonts/fa-brands-400.svg#fontawesome) format("svg")}.fab{font-family: "Font Awesome 5 Brands"}@font-face{font-family: "Font Awesome 5 Free";font-style:normal;font-weight:400;font-display:auto;src:url(/assetts/webfonts/fa-regular-400.eot);src:url(/assetts/webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),url(/assetts/webfonts/fa-regular-400.woff2) format("woff2"),url(/assetts/webfonts/fa-regular-400.woff) format("woff"),url(/assetts/webfonts/fa-regular-400.ttf) format("truetype"),url(/assetts/webfonts/fa-regular-400.svg#fontawesome) format("svg")}.far{font-weight:400}@font-face{font-family: "Font Awesome 5 Free";font-style:normal;font-weight:900;font-display:auto;src:url(/assetts/webfonts/fa-solid-900.eot);src:url(/assetts/webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),url(/assetts/webfonts/fa-solid-900.woff2) format("woff2"),url(/assetts/webfonts/fa-solid-900.woff) format("woff"),url(/assetts/webfonts/fa-solid-900.ttf) format("truetype"),url(/assetts/webfonts/fa-solid-900.svg#fontawesome) format("svg")}.fa,.far,.fas{font-family: "Font Awesome 5 Free"}.fa,.fas{font-weight:900}.fa-bars:before{content:"\f0c9"}.fa-times:before{content:"\f00d"}.fa-envelope:before{content:"\f0e0"}.fa-phone:before{content:"\f095"}.fa-map-marker-alt:before{content:"\f3c5"}.fa-user-friends:before{content:"\f500"}.fa-user:before{content:"\f007"}.fa-bed:before{content:"\f236"}.fa-bath:before{content:"\f2cd"}.fa-car:before{content:"\f1b9"}.fa-paw:before{content:"\f1b0"}.fa-shower:before{content:"\f2cc"}.fa-check-circle:before{content:"\f058"}.fa-circle:before{content:"\f111"}.fa-moon:before{content:"\f186"}.fa-home:before{content:"\f015"}.fa-calendar-alt:before{content:"\f073"}.fa-envelope:before{content:"\f0e0"}.fa-mountain:before{content:"\f6fc"}.fa-route:before{content:"\f4d7"}.fa-star:before{content:"\f005"}.fa-chevron-down:before{content:"\f078"}.fa-comment:before{content:"\f075"}.fa-home:before{content:"\f015"}
 
 .overview-container{
-    background-color: #fff;
     width: 80vw;
     height: auto;
     margin: 60px auto 0 auto;
@@ -813,6 +812,67 @@ header{
 .rates-table tr:nth-child(odd) {
     background-color: #fff;
   }
+
+/* ATTRACTION OVERVIEW INFO */
+
+.attractions-overview-info{
+    width: calc(80vw * 0.95);
+    height: auto;
+    overflow-y: hidden;
+    margin: 60px auto 0 auto;
+    box-sizing: border-box;
+    padding-bottom: 16px;
+}
+
+.attractions-overview-info h1{
+    margin: 0;
+    padding: 0;
+}
+
+.attractions-overview-info-text{
+    height: 75px;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.attractions-overview-info-text::after{
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 75px;
+    background: linear-gradient(transparent, white);
+    content: '';
+}
+
+.attractions-overview-info-text.expand{
+    height: max-content;
+}
+
+.attractions-overview-info-text.expand::after{
+    background: none;
+}
+
+.attractions-overview-info-text p{
+    margin: 16px 0 0 0;
+    padding: 0;
+}
+
+.attractions-overview-more-info{
+    height: min-content;
+    width: max-content;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+.attractions-overview-more-info p{
+    color: var(--accent-color);
+    filter: brightness(90%);
+    font-size: 1em;
+    pointer-events: none;
+}
+
 
 /* ATTRACTION PAGE ICONS */
 
