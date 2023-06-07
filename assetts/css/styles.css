@@ -932,11 +932,12 @@ header{
 .contact-container {
     width: 100%;
     height: min-content;
-    min-height: 800px;
+    min-height: 650px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    background: red;
 }
 
 .contact-form-container{
