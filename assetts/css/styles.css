@@ -512,6 +512,7 @@ header{
     margin: 60px auto 0 auto;
     box-sizing: border-box;
     padding-bottom: 16px;
+    font-family: var(--default-font-family);
 }
 
 .cabins-overview-container, .attractions-overview-container{
