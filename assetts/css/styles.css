@@ -832,6 +832,8 @@ header{
     height: 75px;
     overflow-y: hidden;
     position: relative;
+    font-family: var(--default-font-family);
+    font-size: 1.1em;
 }
 
 .attractions-overview-info-text::after{
@@ -843,6 +845,7 @@ header{
     height: 75px;
     background: linear-gradient(transparent, white);
     content: '';
+    pointer-events: none;
 }
 
 .attractions-overview-info-text.expand{
