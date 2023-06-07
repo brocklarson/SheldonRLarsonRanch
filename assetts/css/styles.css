@@ -937,7 +937,6 @@ header{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background: red;
 }
 
 .contact-form-container{
