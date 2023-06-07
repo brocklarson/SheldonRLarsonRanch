@@ -927,3 +927,67 @@ header{
     color: red;
     border-color: red;
 }
+
+/* CONTACT US PAGE */
+.contact-container {
+    width: 100%;
+    height: min-content;
+    min-height: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact-form-container{
+    margin: 24px 0;
+    width: 400px;
+    margin-right: 10vw;
+    padding: 0;
+}
+
+.contact-information{
+    font-family: var(--default-font-family);
+    display: block;
+    padding: 0;
+    min-width: 300px;
+    margin-bottom: 33vh;
+    margin-left: 10vw;
+}
+
+.contact-information h3 {
+    display: block;
+    font-size: 30px;
+    font-weight: 300;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+.contact-information h4 {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 15px 0;
+    padding: 0;
+}
+
+.contact-information h5 {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.contact-icon{
+    float: left;
+    color: #555;
+    width: 20px;
+    padding: 3px 0 0 0;
+    margin: 0 10px 0 0;
+    
+}
+
+.contact-information a{
+    text-decoration: none;
+}
