@@ -99,7 +99,7 @@ const createUI = (attractionCategory) => {
     createAttractionsOverview(attractionCategory);
     attractionCategory.attractions.forEach(attraction => {
         createAttractionsDOM(attraction);
-    });
+    }); 
 };
 
 export { createUI };

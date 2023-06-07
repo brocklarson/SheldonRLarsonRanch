@@ -471,13 +471,12 @@ header{
 
 .calendar-setup{
     position: fixed;
-    top: 25%;
-    transform: translate(0%, -30%);
+    bottom: 0%;
+    margin-bottom: 3vh;
     z-index: 9;
     width: 100%;
-    height: auto;
+    height: min-content;
     display: inline-block;
-    margin-top: 60px;
 }
 
 .calendar-setup iframe{
