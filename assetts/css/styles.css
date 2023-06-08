@@ -208,6 +208,10 @@ header{
     width: min-content;
 }
 
+.homepage-date-selector:focus{
+    outline: none;
+}
+
 .homepage-booking-btn{
     cursor: pointer;
     font-size: inherit;
@@ -539,6 +543,7 @@ header{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 4px;
 }
 
 .cabins-overview-text, .attractions-overview-text{
@@ -559,7 +564,7 @@ header{
     font-size: 1.5em;
     margin: 8px 8px;
     text-transform: uppercase;
-    color: black;
+    color: var(--default-font-color);
     font-weight: bold;
 }
 
@@ -579,7 +584,7 @@ header{
 
 .cabins-overview-text a, .attractions-overview-text a{
     text-decoration: none;
-    color: black;
+    color: var(--default-font-color);
 }
 
 .cabin-overview-icon{
@@ -646,7 +651,7 @@ header{
 .cabins-overview-price span{
     font-size: 28px;
     font-weight: bold;
-    color: black;
+    color: var(--default-font-color);
 }
 
 /* CABIN DETAILS */
@@ -901,7 +906,7 @@ header{
 
 .easy-hike{color: green;}
 .moderate-hike{color: blue;}
-.difficult-hike{color: black;}
+.difficult-hike{color: var(--default-font-color);}
 
 .square-number, .square-number-1{
     padding: 1px 2px;
@@ -992,3 +997,51 @@ header{
 .contact-information a{
     text-decoration: none;
 }
+
+/* GALLERY PAGE */
+.gallery-overview-container{
+    display: flex;
+    height: calc(98vh - var(--header-height));
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-overview-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 333px);
+    grid-template-rows: repeat(2, 250px);
+    gap: 50px;
+}
+
+.gallery-overview-grid a{
+    text-decoration: none;
+    color: rgb(102, 102, 102);
+}
+
+.gallery-image-container{
+    height: 90%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 30px 30px -15px;
+}
+
+.gallery-image-container img{
+    height: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.gallery-label-container{
+    height: 10%;
+    width: 100%;
+}
+
+.gallery-label-container p{
+    font-family: var(--default-font-family);
+    margin: 4px 0 0 4px;
+}
+
