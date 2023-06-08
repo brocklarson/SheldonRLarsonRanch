@@ -2,7 +2,7 @@ import { galleries } from './gallery-class.js';
 
 const galleryModule = (() => {
 
-    function createDOM(gallery){
+    function createOverviewDOM(gallery){
         const grid = document.querySelector('.gallery-overview-grid');
 
         const gridArea = document.createElement('div');
@@ -15,8 +15,8 @@ const galleryModule = (() => {
         imgContainer.classList.add('gallery-image-container');
 
         const image = document.createElement('img');
-        image.src = gallery.image.src;
-        image.alt = gallery.image.alt;
+        image.src = gallery.thumbnail.src;
+        image.alt = gallery.thumbnail.alt;
 
         const labelContainer = document.createElement('div');
         labelContainer.classList.add('gallery-label-container');
@@ -33,8 +33,8 @@ const galleryModule = (() => {
     }
 
     galleries.forEach(gallery => {
-        createDOM(gallery);
+        createOverviewDOM(gallery);
     });
-
+    console.log(galleries)
 })();
 
