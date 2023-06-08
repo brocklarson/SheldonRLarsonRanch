@@ -1,5 +1,12 @@
 const createUI = (gallery) => {
-    const container = document.querySelector('.gallery-specific-grid');
+    const container = document.querySelector('.gallery-specific-container');
+    const grid = document.querySelector('.gallery-specific-grid');
+    
+    (function setTitle(){
+        const title = document.createElement('h1');
+        title.innerText = gallery.label;
+        container.prepend(title);  
+    })();
 
     function createOverviewDOM(galleryImage){
         const anchor = document.createElement('a');
@@ -10,7 +17,7 @@ const createUI = (gallery) => {
         image.src = galleryImage.src;
         image.alt = galleryImage.alt;
 
-        container.appendChild(anchor);
+        grid.appendChild(anchor);
         anchor.appendChild(image);
     }
 

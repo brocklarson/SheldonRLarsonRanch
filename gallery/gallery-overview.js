@@ -35,6 +35,5 @@ const galleryModule = (() => {
     galleries.forEach(gallery => {
         createOverviewDOM(gallery);
     });
-    console.log(galleries)
 })();
 

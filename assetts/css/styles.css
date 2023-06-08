@@ -1048,10 +1048,19 @@ header{
 
 .gallery-specific-container{
     display: flex;
+    flex-direction: column;
     height: calc(98vh - var(--header-height));
     width: 100%;
-    justify-content: center;
     overflow-y: scroll;
+    align-items: center;
+}
+
+.gallery-specific-container h1{
+    color: var(--default-font-color);
+    font-weight: 400;
+    font-family: var(--default-font-family);
+    width: 1025px;
+    font-size: 1.5em;
 }
 
 .gallery-specific-grid{
@@ -1096,7 +1105,7 @@ body.lb-disable-scrolling{overflow:hidden}
 .lb-cancel{display:block;width:32px;height:32px;margin:0 auto;background:url(/assetts/icons/loading.gif) no-repeat}
 .lb-nav{position:absolute;top:0;left:0;height:100%;width:100%;z-index:10}
 .lb-container>.nav{left:0}.lb-nav a{outline:0;background-image:url(data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==)}
-.lb-next,.lb-prev{height:100%;cursor:pointer;display:block}
+.lb-next,.lb-prev{height:100%;cursor:pointer;display:block; filter: brightness(0) saturate(100%) invert(85%) sepia(36%) saturate(3340%) hue-rotate(350deg) brightness(100%) contrast(106%);}
 .lb-nav a.lb-prev{width:34%;left:0;float:left;background:url(/assetts/icons/prev.png) left 48% no-repeat;filter:alpha(Opacity=0);opacity:0;-webkit-transition:opacity .5s;-moz-transition:opacity .5s;-o-transition:opacity .5s;transition:opacity .5s}
 .lb-nav a.lb-prev:hover{filter:alpha(Opacity=100);opacity:1}
 .lb-nav a.lb-next{width:64%;right:0;float:right;background:url(/assetts/icons/next.png) right 48% no-repeat;filter:alpha(Opacity=0);opacity:0;-webkit-transition:opacity .5s;-moz-transition:opacity .5s;-o-transition:opacity .5s;transition:opacity .5s}
@@ -1108,6 +1117,6 @@ body.lb-disable-scrolling{overflow:hidden}
 .lb-data .lb-caption{font-size:13px;font-weight:700;line-height:1em}
 .lb-data .lb-caption a{color:#4ae}
 .lb-data .lb-number{display:block;clear:left;padding-bottom:1em;font-size:12px;color:#999}
-.lb-data .lb-close{display:block;float:right;width:30px;height:30px;background:url(/assetts/icons/close.png) top right no-repeat;text-align:right;outline:0;filter:alpha(Opacity=70);opacity:.7;-webkit-transition:opacity .2s;-moz-transition:opacity .2s;-o-transition:opacity .2s;transition:opacity .2s;z-index: 100;}
+.lb-data .lb-close{display:block;float:right;width:30px;height:30px;background:url(/assetts/icons/close.png) top right no-repeat;text-align:right;outline:0;filter:alpha(Opacity=70);opacity:.7;-webkit-transition:opacity .2s;-moz-transition:opacity .2s;-o-transition:opacity .2s;transition:opacity .2s;z-index: 100; filter: brightness(0) saturate(100%) invert(85%) sepia(36%) saturate(3340%) hue-rotate(350deg) brightness(100%) contrast(106%);}
 .lb-data .lb-close:hover{cursor:pointer;filter:alpha(Opacity=100);opacity:1}
 .lb-caption {font-family: sans-serif !important;letter-spacing: 0.02em !important;font-size: 20px !important;}
