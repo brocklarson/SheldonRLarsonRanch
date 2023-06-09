@@ -11,7 +11,7 @@ other.addAttraction(title, description, shortInfo, img, attractionLink);
 
 title = "Gunnison Reservoir"
 description = `Gunnison Reservoir is a bit smaller than nearby Yuba State Park, but we recommend it since it's a free lake for everyone to use to go boating or waterskiing that is also easily accessible and only a short drive from the cabins! There are boat ramps for the public to use and beaches to set up camp!`;
-img = {src: "/assetts/images/Activities/gunnison-res.jpg", alt: "Birds-eye view of the peaceful gunnison reservoir"}
+img = {src: "/assetts/images/Activities/018.jpg", alt: "Woman waterskiing on Gunnison reservoir"}
 attractionLink = `https://www.bivy.com/adventures/us/utah/gunnison-reservoir-117007`;
 other.addAttraction(title, description, shortInfo, img, attractionLink);
 

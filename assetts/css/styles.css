@@ -1120,3 +1120,75 @@ body.lb-disable-scrolling{overflow:hidden}
 .lb-data .lb-close{display:block;float:right;width:30px;height:30px;background:url(/assetts/icons/close.png) top right no-repeat;text-align:right;outline:0;filter:alpha(Opacity=70);opacity:.7;-webkit-transition:opacity .2s;-moz-transition:opacity .2s;-o-transition:opacity .2s;transition:opacity .2s;z-index: 100; filter: brightness(0) saturate(100%) invert(85%) sepia(36%) saturate(3340%) hue-rotate(350deg) brightness(100%) contrast(106%);}
 .lb-data .lb-close:hover{cursor:pointer;filter:alpha(Opacity=100);opacity:1}
 .lb-caption {font-family: sans-serif !important;letter-spacing: 0.02em !important;font-size: 20px !important;}
+
+/* BOOKING */
+
+.booking-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: calc(100vh - var(--header-height)); 
+        background: #f7f7f7;
+}
+
+.booking-steps-container{
+    flex-grow: 1;
+    height: 100%;
+}
+
+.booking-steps-button{
+    height: 75px;
+    margin-left: 17%;
+    text-align: center;
+    border: 1px solid #efefef;
+    background-color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    pointer-events: none;
+}
+
+.booking-steps-button p{
+    font-family: var(--default-font-family);
+    font-size: 16px;
+    color: #555;
+    opacity: 40%;
+    pointer-events: none;
+}
+
+.booking-steps-button i{
+    color: #555;
+    opacity: 40%;
+    pointer-events: none;
+}
+
+.booking-steps-button.clickable{
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.booking-steps-button.active{
+    height: 75px;
+    margin-left: 15%;
+    text-align: center;
+    background-color: var(--accent-color);
+    border: none;
+    padding: 0;
+    box-shadow: 0 8px 22px 0 rgba(255, 208, 0, 0.4);
+}
+
+.booking-steps-button.active p, .booking-steps-button.active i{
+    opacity: 100%;
+}
+
+.booking-details-container{
+    flex-grow: 4;
+    height: 100%;
+    background: green;
+}
+
+.booking-extras-container{
+    flex-grow: 2;
+    height: 100%;
+    background: cyan;
+}
