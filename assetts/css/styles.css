@@ -1125,6 +1125,7 @@ body.lb-disable-scrolling{overflow:hidden}
 
 .booking-container{
     display: flex;
+    justify-content: center;
     flex-direction: row;
     width: 100%;
     min-height: calc(100vh - var(--header-height)); 
@@ -1133,13 +1134,17 @@ body.lb-disable-scrolling{overflow:hidden}
 }
 
 .booking-steps-container{
-    flex-grow: 1;
+    width: 205px;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: flex-end;
 }
 
 .booking-steps-button{
+    width: 200px;
     height: 75px;
-    margin-left: 17%;
     text-align: center;
     border: 1px solid #efefef;
     background-color: #f3f3f3;
@@ -1168,9 +1173,13 @@ body.lb-disable-scrolling{overflow:hidden}
     pointer-events: all;
 }
 
+:not(.active).booking-steps-button.clickable:hover{
+    filter: brightness(95%);
+}
+
 .booking-steps-button.active{
+    width: 205px;
     height: 75px;
-    margin-left: 15%;
     text-align: center;
     background-color: var(--accent-color);
     border: none;
@@ -1183,19 +1192,19 @@ body.lb-disable-scrolling{overflow:hidden}
 }
 
 .booking-details-container{
-    flex-grow: 4;
+    width: 600px;
     height: fit-content;
-    border-top: solid 1px #ccc;
-    border-bottom: solid 1px #ccc;
+    border-top: solid 1px #efefef;
+    border-bottom: solid 1px #efefef;
     font-family: var(--default-font-family);
     margin-right: 8px;
     padding-bottom: 16px;
-    overflow: hidden;
     background: white;
+    position: relative;
 }
 
 .booking-extras-container{
-    flex-grow: 2;
+    width: 100px;
     height: 100%;
     background: cyan;
 }
@@ -1234,13 +1243,13 @@ body.lb-disable-scrolling{overflow:hidden}
 }
 
 .cabin-select-container, .date-select-container, .people-select-container{
-    border-bottom: solid 1px #ccc;
+    border-bottom: solid 1px #efefef;
     margin: 0px 0px 0px 16px;
 }
 
 .cabin-select, .date-select, .people-select{
     background-color: #fff;
-    border: solid 1px #ccc;
+    border: solid 1px #efefef;
     border-radius: 5px;
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
     color: #555;
@@ -1272,4 +1281,25 @@ body.lb-disable-scrolling{overflow:hidden}
     display: inline-block;
     padding-right: 8px;
     width: 50px;
+}
+
+#booking-next{
+    background-color: var(--accent-color);
+    border-radius: 50px;
+    padding: 8px 20px;
+    font-family: var(--default-font-family);
+    width: min-content;
+    transform: translateY(30px);
+    position: absolute;
+    right: 0;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+#booking-next:hover{
+    filter: brightness(85%);
+}
+
+#booking-next::after {
+    content: none;
 }

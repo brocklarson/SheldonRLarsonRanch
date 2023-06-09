@@ -1,13 +1,29 @@
 buttonsModule = (() => {
+    let STEP = 1;
+    const nextButton = document.querySelector('#booking-next');
     const buttons = Array.from(document.querySelectorAll(".booking-steps-button"));
-    buttons.forEach(button => button.addEventListener('click', handleButtonClick));
 
-    function handleButtonClick(event){
-        const btn = buttons.find( button => event.target.id == button.id);
-        if(btn.id == 'step1') stepOne();
-        if(btn.id == 'step2') stepTwo();
-        if(btn.id == 'step3') stepThree();
-        if(btn.id == 'step4') stepFour();
+    nextButton.addEventListener('click', determineStep);
+    buttons.forEach(button => button.addEventListener('click', determineStep));
+    
+    function determineStep(event){
+        if(event.target.id === nextButton.id){
+            if(STEP < 4) STEP += 1;
+
+            if(STEP === 1) stepOne();
+            if(STEP === 2) stepTwo();
+            if(STEP === 3) stepThree();
+            if(STEP === 4) stepFour();
+        }else{
+            const btn = buttons.find( button => event.target.id === button.id);
+            if(btn.id == 'step1'){ STEP = 1; stepOne();}
+            if(btn.id == 'step2'){ STEP = 2; stepTwo();}
+            if(btn.id == 'step3'){ STEP = 3; stepThree();}
+            if(btn.id == 'step4'){ STEP = 4; stepFour();}
+        }
+
+        if(STEP === 4) nextButton.innerText = 'Submit';
+        else nextButton.innerText = 'Continue';
     }
     
     function setActiveButton(targetIndex){
