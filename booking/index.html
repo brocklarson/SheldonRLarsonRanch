@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/assetts/css/styles.css" type="text/css"/>
+    <script src="/assetts/js/jquery.min.js" defer></script>
+    <script src="/assetts/js/daterangepicker.min.js" defer></script>
     <script src="./booking.js" defer></script>
 
     <title>Booking</title>
 </head>
 <body>
     <script src="/assetts/js/header.js"></script>
+
     <div class="booking-container">
         <div class="booking-steps-container">
             <div id="step1" class="booking-steps-button active clickable">
@@ -33,6 +36,44 @@
         </div>
 
         <div class="booking-details-container">
+            <!-- Step One Done -->
+            <div id="step-one-done" class="">
+                <i class="fas fa-moon moon-icon"></i>
+                <p>- nights</p>
+            </div>
+    
+              <!-- Step One while filling out -->
+            <div class="step-one-filling hide">
+                <div class="cabin-select-container">
+                    <i class="fas fa-home"></i>
+                    <label>Cabin</label>
+                    <select id="cabin-selection" class="cabin-select">
+                        <option value="main-cabin">Main Cabin</option>
+                        <option value="guest-cabin">Guest Cabin</option>
+                        <option value="both-cabins">Both Cabins</option>
+                    </select>
+                </div>
+                <div class="date-select-container">
+                    <i class="far fa-calendar-alt"></i>
+                    <label>Dates</label>
+                    <input id="date-select" class="date-select" type="text" name="daterange" placeholder="01/01/2000 - 01/07/2000"/>
+                </div>
+                <div class="people-select-container">
+                    <div class="number-select">
+                        <i class="fas fa-user-friends"></i>
+                        <label>Adults (13+)</label>
+                        <input id="adults" class="form-control people-select" type="number" min="0" value="0">
+                    </div>
+                    <div class="number-select">
+                        <label>Children (12-)</label>
+                        <input id="children" class="form-control people-select" type="number" min="0" value="0">
+                    </div>
+                    <div class="number-select">
+                        <label>Pets</label>
+                        <input id="pets" class="form-control people-select" type="number" min="0" value="0">
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="booking-extras-container">

@@ -43,6 +43,11 @@ buttonsModule = (() => {
         setActiveButton(3);
     }
 
+
+    (function init(){
+        stepOne();
+    })();
+
 })();
 
 const createDOM = (() => {
