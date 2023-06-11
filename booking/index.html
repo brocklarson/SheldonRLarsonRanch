@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/assetts/css/styles.css" type="text/css"/>
+    <link rel="stylesheet" href="/assetts/css/daterangepicker.css" type="text/css"/>
+
     <script src="/assetts/js/jquery.min.js" defer></script>
+    <script src="/assetts/js/moment.min.js" defer></script> 
     <script src="/assetts/js/daterangepicker.min.js" defer></script>
     <script src="./booking.js" defer></script>
+    <script src="./date-range.js" defer></script>
 
     <title>Booking</title>
 </head>
@@ -37,17 +41,32 @@
 
         <div class="booking-details-container">
             <!-- Step One Done -->
-            <div id="step-one-done" class="hide">
+            <div id="step-one-done" class="completed-step hide">
+                <p id="step-one-done-cabin"></p>
+                <p id="step-one-done-date-range"></p>
                 <i class="fas fa-moon moon-icon"></i>
-                <p>- nights</p>
+                <p id="step-one-done-nights"></p>
+            </div>
+            <!-- Step Two Done -->
+            <div id="step-two-done" class="completed-step hide">
+                <p id= "step-two-done-name"></p>
+                <i class="fas fa-phone envelope-icon"></i>
+                <p id= "step-two-done-phone"></p>
+                <i class="fas fa-envelope envelope-icon"></i>
+                <p id= "step-two-done-email"></p>
+            </div>
+            <!-- Step Three Done -->
+            <div id="step-three-done" class="completed-step hide">
+                <i class="fas fa-comment comment-icon"></i>
+                <p>Thank you for your additional message! We look forward to making your stay better suited for you!</p>
             </div>
     
               <!-- Step One while filling out -->
-            <div class="step-one-filling">
+            <div class="step-filling">
                 <div class="cabin-select-container">
                     <i class="fas fa-home"></i>
                     <label>Cabin</label>
-                    <select id="cabin-selection" class="cabin-select">
+                    <select id="cabin-selection" class="cabin-select" required>
                         <option value="main-cabin">Main Cabin</option>
                         <option value="guest-cabin">Guest Cabin</option>
                         <option value="both-cabins">Both Cabins</option>
@@ -56,13 +75,15 @@
                 <div class="date-select-container">
                     <i class="far fa-calendar-alt"></i>
                     <label>Dates</label>
-                    <input id="date-select" class="date-select" type="text" name="daterange" placeholder="01/01/2000 - 01/07/2000"/>
+                    <input id="date-select" class="date-select" type="text" name="daterange" placeholder="Arrival - Departure" required/>
+                    <small id="invalidDate">*Please enter a valid date range</small>
                 </div>
                 <div class="people-select-container">
                     <div class="number-select">
                         <i class="fas fa-user-friends"></i>
                         <label>Adults (13+)</label>
-                        <input id="adults" class="form-control people-select" type="number" min="0" value="0">
+                        <input id="adults" class="form-control people-select" type="number" min="0" value="0" required>
+                        <small id="invalidPeople">*Please enter at least one adult</small>
                     </div>
                     <div class="number-select">
                         <label>Children (12-)</label>
@@ -74,7 +95,94 @@
                     </div>
                 </div>
             </div>
-
+            <!-- Step Two while filling out-->
+            <div class="step-filling hide">
+                <div class="guest-name-container">
+                    <div class="guest-name">
+                    <i class="fas fa-user person-icon"></i>
+                    <label>First Name</label>
+                    <input id="first-name" type="text">
+                    </div>
+                    <div class="guest-name">
+                    <label>Last Name</label>
+                    <input id="last-name" type="text">
+                    <small id="invalidName">*Please enter your name</small>
+                    </div>
+                </div>
+                <div class="email-container">
+                    <i class="fas fa-envelope email-icon"></i>
+                    <label>Email Address</label>
+                    <input id="guest-email" type="text"/>
+                    <small id="invalidEmail">*Please enter a valid email address</small>
+                </div>
+                <div class="phone-container">
+                    <i class="fas fa-phone phone-icon"></i>
+                    <label id="phone-label">Phone Number</label>
+                    <input id="guest-phone" type="tel"/><br>
+                    <small id="invalidPhone">*Please enter a valid phone number</small>
+                </div>
+                <div>
+                    <label class="checkbox-label">
+                        <input id="safety-checkbox" type="checkbox"><span id="safety-agreement">I have read and agree to this <a href="./downloadables/liability_waiver.pdf" target="_blank">Release & Waiver of Liability</a>.</span>
+                        <span class="checkbox-custom"></span>
+                    </label>
+                    <small id="invalidCheckbox">*Please agree to the terms and conditions and safety waiver</small>
+                </div>
+            </div>
+            <!-- Step Three while filling out -->
+            <div class="step-filling hide">
+                <div class="comments-container">
+                  <i class="fas fa-comment comments-icon"></i>
+                  <label id="comment-label">Additional Message for Host</label>
+                  <textarea id="add-comment" placeholder="Please write any comments or requests you may have for the host!"></textarea>
+                </div>
+            </div>
+            <!-- Step Four while filling out -->
+            <div class="step4 step-filling hide">
+                <h1>Contact Information</h1>
+                <p><strong>Name: </strong><span id="confirm-name"></span></p>
+                <p><strong>E-mail: </strong><span id="confirm-email"></span></p>
+                <p><strong>Phone: </strong><span id="confirm-phone"></span></p>
+                <h1>Group Information</h1>
+                <p><strong>Total Number of Persons: </strong><span id="confirm-totalNumber"></span></p>
+                <p><strong>Adults: </strong><span id="confirm-adults"></span></p>
+                <p><strong>Children: </strong><span id="confirm-children"></span></p>
+                <p><strong>Pets: </strong><span id="confirm-pets"></span></p>
+                <h1>Stay Information</h1>
+                <p><strong>Cabin Selection: </strong><span id="confirm-cabin"></span></p>
+                <p><strong>Check-In: </strong><span id="confirm-startDate"></span> after 3:00 pm</p>
+                <p><strong>Check-Out: </strong><span id="confirm-endDate"></span> before 11:00 am</p>
+                <p><strong>Number of Nights: </strong><span id="confirm-nights"></span></p>
+                <h1>Message to Host</h1>
+                <p>"<span id="confirm-message"></span>"</p>
+                <h1 id="total-cost">$<span id="confirm-cost"></span></h1>
+                <p id="cost-calculator">- night(s) @ $-.--/night</p>
+                <p id="final-note">*A non-refundable cleaning and security deposit will be required upon confirmation of your booking in order to hold your reservation. This deposit goes toward your total and the remainder will be due upon arrival.</p><br>
+                <p id="final-note2">We will contact you by email as soon as possible to confirm your booking! If you have any questions, contact us at (435) 340-0075 or SheldonRLarsonRanch@gmail.com</p>
+                
+                <form id="step-four-form" class="hide" action="https://formspree.io/brock.larson0725@gmail.com" method="POST" target="_blank">
+                    <div id="step-four-form-hidden">
+                        <input id="confirm-name0" type="text" name="Name" readonly>
+                        <input id="confirm-email0" type="text" name="E-mail" readonly>
+                        <input id="confirm-phone0" type="text" name="Phone Number" readonly>
+                        <input id="confirm-cabin0" type="text" name="Cabin" readonly>
+                        <input id="confirm-daterange0" type="text" name="Date Range" readonly>
+                        <input id="confirm-startDate0" type="text" name="Check-In" readonly>
+                        <input id="confirm-endDate0" type="text" name="Check-Out" readonly>
+                        <input id="confirm-nights0" type="text" name="Number of Nights" readonly>
+                        <input id="confirm-totalNumber0" type="text" name="Total Number of People" readonly>
+                        <input id="confirm-adults0" type="text" name="Adults" readonly>
+                        <input id="confirm-children0" type="text" name="Children" readonly>
+                        <input id="confirm-pets0" type="text" name="Pets" readonly>
+                        <input id="confirm-message0" type="text" name="Message" readonly>
+                        <input id="confirm-cost0" type="text" name="Total Cost" readonly>
+                        <input id="cost-calculator0" type="text" name="Cost Calculation" readonly>
+                        <input id="safety-agree0" type="text" name="Agreed to Terms and Conditions and Liability Waiver" readonly>
+                    </div>
+                    <div id="previous-btn-4">PREVIOUS</div>
+                    <button id="continue-btn-4" type="submit">SUBMIT</button>
+                </form>
+            </div>
 
             <div id="booking-next">Continue</div>
         </div>

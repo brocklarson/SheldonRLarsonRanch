@@ -84,7 +84,7 @@ header{
     padding-right: 20px;
 }
 
-#book-now-nav:hover{
+#book-now-nav:hover, #book-now-nav:focus{
     filter: brightness(85%);
 }
 
@@ -221,7 +221,7 @@ header{
     padding: 0 40px;
 }
 
-.homepage-booking-btn:hover{
+.homepage-booking-btn:hover, .homepage-booking-btn:focus{
     filter: brightness(85%);
 }
 
@@ -431,7 +431,7 @@ header{
     transition: transform 0.3s ease-in-out;
 }
 
-.map-howTo:hover{
+.map-howTo:hover, .map-howTo:focus{
     transform: rotate(360deg) scale(1.2);
 }
 
@@ -1171,9 +1171,11 @@ body.lb-disable-scrolling{overflow:hidden}
 .booking-steps-button.clickable{
     cursor: pointer;
     pointer-events: all;
+    margin-top: 8px;
 }
 
-:not(.active).booking-steps-button.clickable:hover{
+:not(.active).booking-steps-button.clickable:hover,
+:not(.active).booking-steps-button.clickable:focus{
     filter: brightness(95%);
 }
 
@@ -1187,6 +1189,10 @@ body.lb-disable-scrolling{overflow:hidden}
     box-shadow: 0 8px 22px 0 rgba(255, 208, 0, 0.4);
 }
 
+#step1{
+    margin: 0;
+}
+
 .booking-steps-button.active p, .booking-steps-button.active i{
     opacity: 100%;
 }
@@ -1194,12 +1200,10 @@ body.lb-disable-scrolling{overflow:hidden}
 .booking-details-container{
     width: 600px;
     height: fit-content;
-    border-top: solid 1px #efefef;
-    border-bottom: solid 1px #efefef;
+    border: none;
     font-family: var(--default-font-family);
     margin-right: 8px;
     padding-bottom: 16px;
-    background: white;
     position: relative;
 }
 
@@ -1209,30 +1213,41 @@ body.lb-disable-scrolling{overflow:hidden}
     background: cyan;
 }
 
-.hide{
-    display: none !important;
+.booking-details-container small {
+    color: red;
+    display: none;
+    font-size: 0.9em;
+    margin: 0 0 8px 32px;
+    white-space: nowrap;
 }
 
-/* Step 1 */
-.step-one-filling{
+.booking-details-container small.show {
     display: block;
 }
 
-.step-one-filling p{
+/* Filling Out Step*/
+.step-filling{
+    display: block;
+    background: white;
+    margin: 0;
+    padding: 8px 0;
+}
+
+.step-filling p{
     color: #555;
     float: left;
     margin-top: 16px;
     margin-left: 16px;
 }
 
-.step-one-filling label{
+.step-filling label{
     display: block;
     color: grey;
     font-size: 16px;
     margin: 24px 0px 8px 32px;
 }
 
-.step-one-filling i{
+.step-filling i{
     float: left;
     color: #555;
     text-align: center;
@@ -1242,12 +1257,17 @@ body.lb-disable-scrolling{overflow:hidden}
     margin-top: 24px;
 }
 
-.cabin-select-container, .date-select-container, .people-select-container{
+.booking-details-container > div > div{
     border-bottom: solid 1px #efefef;
     margin: 0px 0px 0px 16px;
 }
 
-.cabin-select, .date-select, .people-select{
+.booking-details-container > div > div:last-child{
+    border-bottom: none;
+}
+
+
+.booking-details-container input, .booking-details-container select, textarea{
     background-color: #fff;
     border: solid 1px #efefef;
     border-radius: 5px;
@@ -1265,6 +1285,26 @@ body.lb-disable-scrolling{overflow:hidden}
     width: 205px;
 }
 
+.booking-details-container input:focus{
+    outline: none;
+}
+
+#add-comment{
+    height: 200px;
+    max-height: 400px;
+    min-height: 200px;
+    width: 75%;
+    max-width: 80%;
+    min-width: 50%;
+    padding: 8px 4px;
+    margin-top: 16px;
+}
+
+#add-comment::placeholder{
+    font-family: var(--default-font-family);
+    color: rgb(155, 155, 155);
+}
+
 .people-select-container{
     display: flex;
     flex-wrap: nowrap;
@@ -1280,7 +1320,7 @@ body.lb-disable-scrolling{overflow:hidden}
 .people-select{
     display: inline-block;
     padding-right: 8px;
-    width: 50px;
+    width: 50px !important;
 }
 
 #booking-next{
@@ -1296,10 +1336,185 @@ body.lb-disable-scrolling{overflow:hidden}
     cursor: pointer;
 }
 
-#booking-next:hover{
+#booking-next:hover, #booking-next:focus{
     filter: brightness(85%);
 }
 
 #booking-next::after {
     content: none;
 }
+
+/* Completed Steps */
+.completed-step{
+    background-color: #fff;
+    border-bottom: solid 1px #efefef;
+    height: 75px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.completed-step p{
+    font-family: var(--default-font-family);
+    font-size: 14px;
+    color: #555;
+    padding-left: 8px;
+    padding-top: 4px;
+    font-weight: 400;
+}
+
+#step-three-done p{
+    font-weight: 400;
+}
+
+.completed-step p:first-of-type{
+    padding-top: 8px;
+    font-weight:bold;
+}
+ 
+.completed-step p:last-of-type{
+    font-style: italic;
+}
+
+.completed-step i{
+    float: left;
+    color: #555;
+    text-align: center;
+    padding-left: 14px;
+    padding-top: 4px;
+    padding-right: 4px;
+}
+
+.hide{
+    display: none !important;
+}
+
+.step4{
+    padding-left: 16px;
+}
+
+.step-filling h1{
+    font-family: var(--secondary-font-family);     
+    letter-spacing: 0.05em;
+    padding: 16px 0px 8px 0px;
+}
+
+.step4 p{
+    margin: 8px 8px;
+    word-wrap: normal;
+    font-size: 16px;
+    float: none;
+}
+
+
+#total-cost, #confirm-cost{
+    margin-top: 28px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#cost-calculator{
+    margin-top: 0px;
+    margin-left: 16px;
+    font-style: italic;
+    font-size: 12px;
+    min-width: 150px;
+}
+
+#final-note, #final-note2{
+    font-size: 14px;
+    margin:0;
+    padding: 0;
+}
+
+#final-note{
+    margin-top: 16px;
+}
+
+.cancelBtn, .amenities{
+    display: none;
+}
+
+/* Checkbox */
+
+#safety-agreement{
+    display: inline;
+    font-family: var(--default-font-family);
+    color: #555;
+    margin: 0px 8px 0px 8px; 
+    padding-left: 10px;
+}
+
+#safety-agreement a{
+    color: var(--other-accent);
+}
+
+/* Customize checkbox */
+.checkbox-label{
+    display: block;
+    position: relative;
+    padding-left: 0px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-bottom: 16px;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-label input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkbox-custom{
+    position: absolute;
+    top: 0;
+    left: -15px;
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: solid 1px #555;
+    cursor: pointer;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-custom:hover, .checkbox-custom:focus{
+    background-color: #555;
+  }
+  
+  /* When the checkbox is checked, add a background */
+  .checkbox-label input:checked ~ .checkbox-custom {
+    background-color: #555;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+.checkbox-custom:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .checkbox-label input:checked ~ .checkbox-custom:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .checkbox-label .checkbox-custom:after {
+    left: 5px;
+    top: -1px;
+    width: 8px;
+    height: 16px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
