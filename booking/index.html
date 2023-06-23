@@ -11,7 +11,7 @@
     <script src="/assetts/js/jquery.min.js" defer></script>
     <script src="/assetts/js/moment.min.js" defer></script> 
     <script src="/assetts/js/daterangepicker.min.js" defer></script>
-    <script src="./booking.js" defer></script>
+    <script type="module" src="./booking.js" defer></script>
     <script src="./date-range.js" defer></script>
 
     <title>Booking</title>
@@ -155,8 +155,13 @@
                 <p><strong>Number of Nights: </strong><span id="confirm-nights"></span></p>
                 <h1>Message to Host</h1>
                 <p>"<span id="confirm-message"></span>"</p>
+                <div id="cost-calculator">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    
+                </div>
                 <h1 id="total-cost">$<span id="confirm-cost"></span></h1>
-                <p id="cost-calculator">- night(s) @ $-.--/night</p>
                 <p id="final-note">*A non-refundable cleaning and security deposit will be required upon confirmation of your booking in order to hold your reservation. This deposit goes toward your total and the remainder will be due upon arrival.</p><br>
                 <p id="final-note2">We will contact you by email as soon as possible to confirm your booking! If you have any questions, contact us at (435) 340-0075 or SheldonRLarsonRanch@gmail.com</p>
                 
@@ -179,8 +184,6 @@
                         <input id="cost-calculator0" type="text" name="Cost Calculation" readonly>
                         <input id="safety-agree0" type="text" name="Agreed to Terms and Conditions and Liability Waiver" readonly>
                     </div>
-                    <div id="previous-btn-4">PREVIOUS</div>
-                    <button id="continue-btn-4" type="submit">SUBMIT</button>
                 </form>
             </div>
 

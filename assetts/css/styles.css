@@ -1199,11 +1199,11 @@ body.lb-disable-scrolling{overflow:hidden}
 
 .booking-details-container{
     width: 600px;
-    height: fit-content;
+    height: max-content;
     border: none;
     font-family: var(--default-font-family);
     margin-right: 8px;
-    padding-bottom: 16px;
+    padding-bottom: 200px;
     position: relative;
 }
 
@@ -1329,7 +1329,7 @@ body.lb-disable-scrolling{overflow:hidden}
     padding: 8px 20px;
     font-family: var(--default-font-family);
     width: min-content;
-    transform: translateY(30px);
+    transform: translateY(20px);
     position: absolute;
     right: 0;
     margin-right: 16px;
@@ -1396,6 +1396,7 @@ body.lb-disable-scrolling{overflow:hidden}
     font-family: var(--secondary-font-family);     
     letter-spacing: 0.05em;
     padding: 16px 0px 8px 0px;
+    font-size: 24px;
 }
 
 .step4 p{
@@ -1407,17 +1408,18 @@ body.lb-disable-scrolling{overflow:hidden}
 
 
 #total-cost, #confirm-cost{
-    margin-top: 28px;
+    margin-top: 0px;
     font-size: 32px;
     font-weight: bold;
 }
 
 #cost-calculator{
-    margin-top: 0px;
+    margin-top: 28px;
     margin-left: 16px;
     font-style: italic;
     font-size: 12px;
     min-width: 150px;
+    border: none;
 }
 
 #final-note, #final-note2{
