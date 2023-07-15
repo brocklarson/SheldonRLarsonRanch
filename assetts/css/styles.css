@@ -474,9 +474,6 @@ header{
 /* AVAILABILITY */
 
 .calendar-setup{
-    position: fixed;
-    bottom: 0%;
-    margin-bottom: 3vh;
     z-index: 9;
     width: 100%;
     height: min-content;
@@ -1432,7 +1429,7 @@ body.lb-disable-scrolling{overflow:hidden}
     margin-top: 16px;
 }
 
-.cancelBtn, .amenities{
+.cancelBtn{
     display: none;
 }
 

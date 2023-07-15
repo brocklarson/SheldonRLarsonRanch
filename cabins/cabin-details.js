@@ -107,6 +107,7 @@ const createUI = (cabin) => {
 
         const amenitiesContainer = document.querySelector(".amenities-container");
         cabin.amenities.forEach(amenity => {
+            console.log(amenity);
             const amenityText = document.createElement("p");
             amenityText.innerText = `- ${amenity}`;
             amenityText.classList.add("amenities");
