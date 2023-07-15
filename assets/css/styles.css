@@ -202,7 +202,7 @@ header{
 
 .homepage-date-selector{
     margin: 0 20px;
-    background: url(/assetts/icons/calendar.png) no-repeat scroll right;
+    background: url(/assets/icons/calendar.png) no-repeat scroll right;
     background-size: 30px 30px;
     padding-right: 30px;
     width: min-content;
@@ -505,7 +505,7 @@ header{
 
 /* CABIN OVERVIEW & ATTRACTIONS OVERVIEW */
 /* FONT AWESOME ICONS *//*https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css*//*https://cdnjs.com/libraries/font-awesome*/
-.fa,.fab,.fal,.far,.fas{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1}.fa-lg{font-size:1.33333em;line-height:.75em;vertical-align:-.0667em}@font-face{font-family: "Font Awesome 5 Brands";font-style:normal;font-weight:normal;font-display:auto;src:url(/assetts/webfonts/fa-brands-400.eot);src:url(/assetts/webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),url(/assetts/webfonts/fa-brands-400.woff2) format("woff2"),url(/assetts/webfonts/fa-brands-400.woff) format("woff"),url(/assetts/webfonts/fa-brands-400.ttf) format("truetype"),url(/assetts/webfonts/fa-brands-400.svg#fontawesome) format("svg")}.fab{font-family: "Font Awesome 5 Brands"}@font-face{font-family: "Font Awesome 5 Free";font-style:normal;font-weight:400;font-display:auto;src:url(/assetts/webfonts/fa-regular-400.eot);src:url(/assetts/webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),url(/assetts/webfonts/fa-regular-400.woff2) format("woff2"),url(/assetts/webfonts/fa-regular-400.woff) format("woff"),url(/assetts/webfonts/fa-regular-400.ttf) format("truetype"),url(/assetts/webfonts/fa-regular-400.svg#fontawesome) format("svg")}.far{font-weight:400}@font-face{font-family: "Font Awesome 5 Free";font-style:normal;font-weight:900;font-display:auto;src:url(/assetts/webfonts/fa-solid-900.eot);src:url(/assetts/webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),url(/assetts/webfonts/fa-solid-900.woff2) format("woff2"),url(/assetts/webfonts/fa-solid-900.woff) format("woff"),url(/assetts/webfonts/fa-solid-900.ttf) format("truetype"),url(/assetts/webfonts/fa-solid-900.svg#fontawesome) format("svg")}.fa,.far,.fas{font-family: "Font Awesome 5 Free"}.fa,.fas{font-weight:900}.fa-bars:before{content:"\f0c9"}.fa-times:before{content:"\f00d"}.fa-envelope:before{content:"\f0e0"}.fa-phone:before{content:"\f095"}.fa-map-marker-alt:before{content:"\f3c5"}.fa-user-friends:before{content:"\f500"}.fa-user:before{content:"\f007"}.fa-bed:before{content:"\f236"}.fa-bath:before{content:"\f2cd"}.fa-car:before{content:"\f1b9"}.fa-paw:before{content:"\f1b0"}.fa-shower:before{content:"\f2cc"}.fa-check-circle:before{content:"\f058"}.fa-circle:before{content:"\f111"}.fa-moon:before{content:"\f186"}.fa-home:before{content:"\f015"}.fa-calendar-alt:before{content:"\f073"}.fa-envelope:before{content:"\f0e0"}.fa-mountain:before{content:"\f6fc"}.fa-route:before{content:"\f4d7"}.fa-star:before{content:"\f005"}.fa-chevron-down:before{content:"\f078"}.fa-comment:before{content:"\f075"}.fa-home:before{content:"\f015"}
+.fa,.fab,.fal,.far,.fas{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1}.fa-lg{font-size:1.33333em;line-height:.75em;vertical-align:-.0667em}@font-face{font-family: "Font Awesome 5 Brands";font-style:normal;font-weight:normal;font-display:auto;src:url(/assets/webfonts/fa-brands-400.eot);src:url(/assets/webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),url(/assets/webfonts/fa-brands-400.woff2) format("woff2"),url(/assets/webfonts/fa-brands-400.woff) format("woff"),url(/assets/webfonts/fa-brands-400.ttf) format("truetype"),url(/assets/webfonts/fa-brands-400.svg#fontawesome) format("svg")}.fab{font-family: "Font Awesome 5 Brands"}@font-face{font-family: "Font Awesome 5 Free";font-style:normal;font-weight:400;font-display:auto;src:url(/assets/webfonts/fa-regular-400.eot);src:url(/assets/webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),url(/assets/webfonts/fa-regular-400.woff2) format("woff2"),url(/assets/webfonts/fa-regular-400.woff) format("woff"),url(/assets/webfonts/fa-regular-400.ttf) format("truetype"),url(/assets/webfonts/fa-regular-400.svg#fontawesome) format("svg")}.far{font-weight:400}@font-face{font-family: "Font Awesome 5 Free";font-style:normal;font-weight:900;font-display:auto;src:url(/assets/webfonts/fa-solid-900.eot);src:url(/assets/webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),url(/assets/webfonts/fa-solid-900.woff2) format("woff2"),url(/assets/webfonts/fa-solid-900.woff) format("woff"),url(/assets/webfonts/fa-solid-900.ttf) format("truetype"),url(/assets/webfonts/fa-solid-900.svg#fontawesome) format("svg")}.fa,.far,.fas{font-family: "Font Awesome 5 Free"}.fa,.fas{font-weight:900}.fa-bars:before{content:"\f0c9"}.fa-times:before{content:"\f00d"}.fa-envelope:before{content:"\f0e0"}.fa-phone:before{content:"\f095"}.fa-map-marker-alt:before{content:"\f3c5"}.fa-user-friends:before{content:"\f500"}.fa-user:before{content:"\f007"}.fa-bed:before{content:"\f236"}.fa-bath:before{content:"\f2cd"}.fa-car:before{content:"\f1b9"}.fa-paw:before{content:"\f1b0"}.fa-shower:before{content:"\f2cc"}.fa-check-circle:before{content:"\f058"}.fa-circle:before{content:"\f111"}.fa-moon:before{content:"\f186"}.fa-home:before{content:"\f015"}.fa-calendar-alt:before{content:"\f073"}.fa-envelope:before{content:"\f0e0"}.fa-mountain:before{content:"\f6fc"}.fa-route:before{content:"\f4d7"}.fa-star:before{content:"\f005"}.fa-chevron-down:before{content:"\f078"}.fa-comment:before{content:"\f075"}.fa-home:before{content:"\f015"}
 
 .overview-container{
     width: 80vw;
@@ -943,10 +943,55 @@ header{
 }
 
 .contact-form-container{
-    margin: 24px 0;
     width: 400px;
-    margin-right: 10vw;
     padding: 0;
+}
+
+#contactForm {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 32px;
+}
+
+#contactForm small{
+    margin-left: 4px;
+    font-size: 0.8em;
+}
+
+#contactForm input,
+#contactForm textarea,
+#contactForm button {
+    font-family: var(--default-font-family) !important;
+    font-size: 16px;
+    margin: 8px 0;
+    padding: 8px 4px;
+    width: 100% !important;
+    outline: none;
+    border: solid 1px rgb(207, 206, 206);
+    border-radius: 5px;
+    height: auto;
+    color: black;
+}
+
+#contactForm textarea{
+    resize: vertical;
+}
+
+::placeholder{ 
+    color: black;
+}
+
+#contactForm button {
+    background-color: var(--accent-color);
+    border: none;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+#contactForm button:hover {
+    filter: brightness(90%);
 }
 
 .contact-information{
@@ -954,8 +999,6 @@ header{
     display: block;
     padding: 0;
     min-width: 300px;
-    margin-bottom: 33vh;
-    margin-left: 10vw;
 }
 
 .contact-information h3 {
@@ -1099,13 +1142,13 @@ body.lb-disable-scrolling{overflow:hidden}
 .lb-outerContainer{position:relative;width:250px;height:250px;margin:0 auto;border-radius:4px;background-color:#fff}
 .lb-outerContainer:after{content:"";display:table;clear:both}
 .lb-loader{top:43%;height:25%;width:100%}
-.lb-cancel{display:block;width:32px;height:32px;margin:0 auto;background:url(/assetts/icons/loading.gif) no-repeat}
+.lb-cancel{display:block;width:32px;height:32px;margin:0 auto;background:url(/assets/icons/loading.gif) no-repeat}
 .lb-nav{position:absolute;top:0;left:0;height:100%;width:100%;z-index:10}
 .lb-container>.nav{left:0}.lb-nav a{outline:0;background-image:url(data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==)}
 .lb-next,.lb-prev{height:100%;cursor:pointer;display:block; filter: brightness(0) saturate(100%) invert(85%) sepia(36%) saturate(3340%) hue-rotate(350deg) brightness(100%) contrast(106%);}
-.lb-nav a.lb-prev{width:34%;left:0;float:left;background:url(/assetts/icons/prev.png) left 48% no-repeat;filter:alpha(Opacity=0);opacity:0;-webkit-transition:opacity .5s;-moz-transition:opacity .5s;-o-transition:opacity .5s;transition:opacity .5s}
+.lb-nav a.lb-prev{width:34%;left:0;float:left;background:url(/assets/icons/prev.png) left 48% no-repeat;filter:alpha(Opacity=0);opacity:0;-webkit-transition:opacity .5s;-moz-transition:opacity .5s;-o-transition:opacity .5s;transition:opacity .5s}
 .lb-nav a.lb-prev:hover{filter:alpha(Opacity=100);opacity:1}
-.lb-nav a.lb-next{width:64%;right:0;float:right;background:url(/assetts/icons/next.png) right 48% no-repeat;filter:alpha(Opacity=0);opacity:0;-webkit-transition:opacity .5s;-moz-transition:opacity .5s;-o-transition:opacity .5s;transition:opacity .5s}
+.lb-nav a.lb-next{width:64%;right:0;float:right;background:url(/assets/icons/next.png) right 48% no-repeat;filter:alpha(Opacity=0);opacity:0;-webkit-transition:opacity .5s;-moz-transition:opacity .5s;-o-transition:opacity .5s;transition:opacity .5s}
 .lb-nav a.lb-next:hover{filter:alpha(Opacity=100);opacity:1}
 .lb-dataContainer{margin:0 auto;padding-top:5px;width:100%;border-bottom-left-radius:4px;border-bottom-right-radius:4px}
 .lb-dataContainer:after{content:"";display:table;clear:both}
@@ -1114,7 +1157,7 @@ body.lb-disable-scrolling{overflow:hidden}
 .lb-data .lb-caption{font-size:13px;font-weight:700;line-height:1em}
 .lb-data .lb-caption a{color:#4ae}
 .lb-data .lb-number{display:block;clear:left;padding-bottom:1em;font-size:12px;color:#999}
-.lb-data .lb-close{display:block;float:right;width:30px;height:30px;background:url(/assetts/icons/close.png) top right no-repeat;text-align:right;outline:0;filter:alpha(Opacity=70);opacity:.7;-webkit-transition:opacity .2s;-moz-transition:opacity .2s;-o-transition:opacity .2s;transition:opacity .2s;z-index: 100; filter: brightness(0) saturate(100%) invert(85%) sepia(36%) saturate(3340%) hue-rotate(350deg) brightness(100%) contrast(106%);}
+.lb-data .lb-close{display:block;float:right;width:30px;height:30px;background:url(/assets/icons/close.png) top right no-repeat;text-align:right;outline:0;filter:alpha(Opacity=70);opacity:.7;-webkit-transition:opacity .2s;-moz-transition:opacity .2s;-o-transition:opacity .2s;transition:opacity .2s;z-index: 100; filter: brightness(0) saturate(100%) invert(85%) sepia(36%) saturate(3340%) hue-rotate(350deg) brightness(100%) contrast(106%);}
 .lb-data .lb-close:hover{cursor:pointer;filter:alpha(Opacity=100);opacity:1}
 .lb-caption {font-family: sans-serif !important;letter-spacing: 0.02em !important;font-size: 20px !important;}
 
@@ -1210,7 +1253,7 @@ body.lb-disable-scrolling{overflow:hidden}
     background: cyan;
 }
 
-.booking-details-container small {
+small {
     color: red;
     display: none;
     font-size: 0.9em;
@@ -1218,7 +1261,7 @@ body.lb-disable-scrolling{overflow:hidden}
     white-space: nowrap;
 }
 
-.booking-details-container small.show {
+small.show {
     display: block;
 }
 
@@ -1532,6 +1575,7 @@ body.lb-disable-scrolling{overflow:hidden}
     visibility: hidden;
     width: max-content;
     z-index: 15;
+    font-family: var(--default-font-family);
 }
 
 .snackbar.show {

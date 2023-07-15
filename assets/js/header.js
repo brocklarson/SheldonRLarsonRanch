@@ -5,12 +5,12 @@ title.classList.add('left-menu');
 const title_a = document.createElement('a');
 title_a.href = '/'
 const title_image = document.createElement('img');
-title_image.src = '/assetts/icons/logo_title.svg'
+title_image.src = '/assets/icons/logo_title.svg'
 
 const navbar = document.createElement('div');
 navbar.classList.add('right-menu');
 const chevron = document.createElement('img');
-chevron.src = '/assetts/icons/chevron-down-small.svg';
+chevron.src = '/assets/icons/chevron-down-small.svg';
 
 const home = document.createElement('a');
 home.href = '/';

@@ -5,15 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/assetts/css/styles.css" type="text/css"/>
-
+    <link rel="stylesheet" href="/assets/css/styles.css" type="text/css"/>
+    <script src="/assets/js/jquery.min.js" defer></script>
+    <script src="./contact.js" defer></script>
+    <script src="https://www.google.com/recaptcha/enterprise.js" defer></script>
     <title>Contact</title>
 </head>
 <body>
-    <script src="/assetts/js/header.js"></script>
+    <script src="/assets/js/header.js"></script>
 
     <div class="contact-container"> 
-              
+        <div class="contact-form-container">
+            <form id="contactForm" name="contactForm" class="contact-form">
+                <input id="name" name="name" placeholder="Name" required>
+                <small id="invalidName">*Please enter your name</small>
+                <input id="email" name="email" type="email" placeholder="E-mail" required>
+                <small id="invalidEmail">*Please enter a valid email address</small>
+                <input id="phone" name="phone" type="tel" placeholder="Phone Number" required>
+                <small id="invalidPhone">*Please enter a valid phone number</small>
+                <textarea id="contactMessage" name="message" placeholder="Message" rows="10"></textarea>
+                <button id="submitBtn" class="g-recaptcha" data-sitekey="6LdSZSgnAAAAAGQZOv9y_Yhwh908vyo1vEMDgOqw" data-callback="handleFormSubmit">Submit</button>
+            </form>
+            <div id="contactFormSnackbar" class="snackbar"></div>
+        </div> 
+
         <div class="contact-information">
             <h3>Connect with us</h3>
             <h4>You may contact us anytime at:</h4>
@@ -22,11 +37,6 @@
             <a href="tel:435-340-0075"><i class="fas fa-phone contact-icon"></i>
             <h5>(435) 340-0075</h5></a>
         </div>
-
-        <div class="contact-form-container">
-            <script src="./powr.js"></script><div class="powr-form-builder" id="7e034e49_1565934293"></div>    
-        </div> 
-
     </div>
 </body>
 </html>

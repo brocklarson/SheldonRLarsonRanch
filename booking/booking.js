@@ -69,8 +69,8 @@ const buttonsModule = (() => {
         if(event.target.id === nextButton.id){
             if(STEP === 4){
                 nextButton.innerText = 'Submitting...';
-                 const waiting = await stateHandler.submitContactForm(event);
-                 nextButton.innerText = 'Submit';
+                const waiting = await stateHandler.submitContactForm(event);
+                nextButton.innerText = 'Submit';
             }
             else if(STEP < 4) STEP += 1;
         }else{
@@ -270,7 +270,9 @@ const stateHandler = (() => {
                 "Additional Comments": input.comments,
                 _subject: `${input.cabin} Reservation Request - ${input.firstName} ${input.lastName} - ${input.startDate} - ${input.endDate}`,
                 _template: "box",
-                _replyto: input.email
+                _replyto: input.email,
+                _autoresponse: `Thank you for your reservation request for ${input.cabin}. We will get back to you shortly  to confirm the availability`,
+                _captcha: true
             },
             dataType: "json",
             success: (data) => confirmFormSubmission(true, data),
