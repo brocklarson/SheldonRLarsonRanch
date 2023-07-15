@@ -1,5 +1,13 @@
 import { mainCabin, guestCabin, bothCabins } from "/cabins/cabin-class.js";
 
+const  formatPhoneNumber = (phone) => { //This checks if the phone number is in the right format
+    const cleaned = ('' + phone).replace(/\D/g, '');
+    const match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/); //Splits up the numbers by first 3 numbers, next 3 numbers, and last 4 numbers
+    if (match) phone = '(' + match[1] + ') ' + match[2] + '-' + match[3]; //Organizes format like: (123)456-7890
+    else phone = false; //Error mesage
+    return phone;
+}
+
 const buttonsModule = (() => {
     let STEP = 1;
     const nextButton = document.querySelector('#booking-next');
@@ -7,15 +15,6 @@ const buttonsModule = (() => {
 
     nextButton.addEventListener('click', validateForm);
     buttons.forEach(button => button.addEventListener('click', determineStep));
-    
-    function formatPhoneNumber(guestPhone){ //This checks if the phone number is in the right format
-        const cleaned = ('' + guestPhone).replace(/\D/g, '');
-        const match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/); //Splits up the numbers by first 3 numbers, next 3 numbers, and last 4 numbers
-        if (match) guestPhone = '(' + match[1] + ') ' + match[2] + '-' + match[3]; //Organizes format like: (123)456-7890
-        else guestPhone = false; //Error mesage
-        
-        return guestPhone;
-    }
 
     function validateStep1(){
         let invalid = false;
@@ -65,9 +64,15 @@ const buttonsModule = (() => {
         determineStep(event);
     }
 
-    function determineStep(event){
+    async function determineStep(event){
+        //Check if this was called from next button or a specific step button
         if(event.target.id === nextButton.id){
-            if(STEP < 4) STEP += 1;
+            if(STEP === 4){
+                nextButton.innerText = 'Submitting...';
+                 const waiting = await stateHandler.submitContactForm(event);
+                 nextButton.innerText = 'Submit';
+            }
+            else if(STEP < 4) STEP += 1;
         }else{
             const btn = buttons.find( button => event.target.id === button.id);
             if(btn.id == 'step1') STEP = 1; 
@@ -78,7 +83,7 @@ const buttonsModule = (() => {
 
         if(STEP === 4) nextButton.innerText = 'Submit';
         else nextButton.innerText = 'Continue';
-        setActiveState(STEP);
+        stateHandler.setActiveState(STEP);
     }
     
     function setActiveButton(targetIndex){
@@ -98,6 +103,11 @@ const buttonsModule = (() => {
         });
     }
 
+    return {setActiveButton}
+})();
+
+const stateHandler = (() => {
+
     function setActiveState(STEP){
         const index = STEP - 1;
         const completedStep = Array.from(document.querySelectorAll('.completed-step'));
@@ -110,7 +120,7 @@ const buttonsModule = (() => {
             if(!step.classList.contains('hide')) step.classList.add('hide');
         });
 
-        setActiveButton(index);
+        buttonsModule.setActiveButton(index);
         fillingStep[index].classList.remove('hide');
         for(let i = 1; i < STEP; i++){
             completedStep[i - 1].classList.remove('hide');
@@ -175,24 +185,22 @@ const buttonsModule = (() => {
 
         let guestCharge = 0;
         let petCharge = 0;
+        let totalCharge = cabinCost;
         if(guests > 10){
             guestCharge = 5 * (guests - 10);
-            cabinCost += guestCharge;
+            totalCharge += guestCharge;
         }
         if(pets >= 1){
             petCharge = 20 * pets;
-            cabinCost += petCharge;
+            totalCharge += petCharge;
         }
-        const totalCost = cabinCost.toFixed(2).toString();
+        const totalCost = totalCharge.toFixed(2).toString();
+        document.getElementById("cost-calculator").innerHTML = `Subtotal: $${cabinCost.toFixed(2)}<br>Extra Guests: $${guestCharge}<br>Pet Charge: $${petCharge}`;
         document.getElementById("confirm-cost").innerText = totalCost;
-        document.getElementById("confirm-cost0").value = totalCost;
 
-        // document.getElementById("cost-calculator").innerHTML = cabinSelection + ": $" + cabinCost.toFixed(2) +"<br>Extra Guests: $" + guestCharge + "<br>Pet Charge: $" + petCharge;
-        // document.getElementById("cost-calculator0").value = cabinSelection + ": $" + cabinCost.toFixed(2) +"<br>Extra Guests: $" + guestCharge + "<br>Pet Charge: $" + petCharge;
-      }
+    }
 
-    //Function for displaying all the information neatly (The variables ending in "0" are not displayed but are the variables sent to the email in the <form> section of bookNow.html)
-    function confirmBooking(){         
+    function getInputs(){
         const firstName = document.getElementById('first-name').value;
         const lastName = document.getElementById('last-name').value;
         const email = document.getElementById('guest-email').value;
@@ -203,52 +211,90 @@ const buttonsModule = (() => {
         const totalPets = Number(document.getElementById('pets').value);
         const cabinSelection = document.getElementById('cabin-selection');
         const cabin = cabinSelection.options[cabinSelection.selectedIndex].text;
-        const [startDate, EndDate, totalNights] = getDates();
+        const [startDate, endDate, totalNights] = getDates();
         const comments = document.getElementById('add-comment').value;
 
-        //First and last names
-        document.getElementById("confirm-name").innerText = firstName  + " " + lastName;
-        document.getElementById("confirm-name0").value = firstName  + " " + lastName;
-        //Email
-        document.getElementById("confirm-email").innerText = email;
-        document.getElementById("confirm-email0").value = email;
-        //Phone number
-        document.getElementById("confirm-phone").innerText = phone;
-        document.getElementById("confirm-phone0").value = phone;
-        //Number of guests
-        document.getElementById("confirm-totalNumber").innerText = totalGuests;
-        document.getElementById("confirm-totalNumber0").value = totalGuests;
-        //Number of adultes
-        document.getElementById("confirm-adults").innerText = totalAdults;
-        document.getElementById("confirm-adults0").value = totalAdults;
-        //Number of children
-        document.getElementById("confirm-children").innerText = totalChildren;
-        document.getElementById("confirm-children0").value = totalChildren;
-        //Number of pets
-        
-        document.getElementById("confirm-pets").innerText = totalPets;
-        document.getElementById("confirm-pets0").value = totalPets;
-        //Cabin selection
-        document.getElementById("confirm-cabin").innerText = cabin;
-        document.getElementById("confirm-cabin0").value = cabin;
-        //Gets the dates, parses the date, makes it look in the format of "Jan 01, 2019"
-        document.getElementById("confirm-startDate").innerText = startDate;
-        document.getElementById("confirm-startDate0").value = startDate;
-        document.getElementById("confirm-endDate").innerText = EndDate;
-        document.getElementById("confirm-endDate0").value = EndDate;
-        document.getElementById("confirm-daterange0").value = document.getElementById("date-select").value;
-        //Number of nights
-        document.getElementById("confirm-nights").innerText = totalNights;
-        document.getElementById("confirm-nights0").value = totalNights;
-        //Adds their person coments
-        document.getElementById("confirm-message").innerText = comments;
-        document.getElementById("confirm-message0").value = comments;
+        return{
+            "firstName": firstName,
+            "lastName": lastName,
+            "email": email,
+            "phone": phone,
+            "totalGuests": totalGuests,
+            "totalAdults": totalAdults,
+            "totalChildren": totalChildren,
+            "totalPets": totalPets,
+            "cabin": cabin,
+            "startDate": startDate,
+            "endDate": endDate,
+            "totalNights": totalNights,
+            "comments": comments
+        }
+    }
 
-        calcNightlyCost(cabin, totalNights, totalGuests, totalPets);
+    //Function for displaying all the information neatly
+    function confirmBooking(){         
+        const input = getInputs();
+
+        document.getElementById("confirm-name").innerText = input.firstName  + " " + input.lastName;
+        document.getElementById("confirm-email").innerText = input.email;
+        document.getElementById("confirm-phone").innerText = input.phone;
+        document.getElementById("confirm-totalNumber").innerText = input.totalGuests;
+        document.getElementById("confirm-adults").innerText = input.totalAdults;
+        document.getElementById("confirm-children").innerText = input.totalChildren;        
+        document.getElementById("confirm-pets").innerText = input.totalPets;
+        document.getElementById("confirm-cabin").innerText = input.cabin;
+        document.getElementById("confirm-startDate").innerText = input.startDate;
+        document.getElementById("confirm-endDate").innerText = input.endDate;
+        document.getElementById("confirm-nights").innerText = input.totalNights;
+        document.getElementById("confirm-message").innerText = input.comments;
+
+        calcNightlyCost(input.cabin, input.totalNights, input.totalGuests, input.totalPets);
+    }
+
+    async function submitContactForm(event){
+        event.preventDefault();
+        const input = getInputs();
+
+        await $.ajax({
+            url: "https://formsubmit.co/ajax/c8d0ef4b1a60a35163750159cef47655",
+            method: "POST",
+            data: {
+                "Cabin": input.cabin,
+                "Dates": `${input.startDate} - ${input.endDate} (${input.totalNights} Nights)`,
+                "Name": `${input.firstName} ${input.lastName}`,
+                email: input.email,
+                "Phone": input.phone,
+                "Guest": `${input.totalGuests} Guest(s): ${input.totalAdults} Adult(s), ${input.totalChildren} Child(ren)`,
+                "Pets": input.totalPets,
+                "Price": `${document.getElementById("cost-calculator").innerText}\nTotal Cost: $${document.getElementById("confirm-cost").innerText}`,
+                "Additional Comments": input.comments,
+                _subject: `${input.cabin} Reservation Request - ${input.firstName} ${input.lastName} - ${input.startDate} - ${input.endDate}`,
+                _template: "box",
+                _replyto: input.email
+            },
+            dataType: "json",
+            success: (data) => confirmFormSubmission(true, data),
+            error: (err) => confirmFormSubmission(false, err)
+        });
+    }
+
+    async function confirmFormSubmission(successful, data){
+        console.log(data);
+        const snackbar = document.querySelector("#snackbar");
+        if(successful)snackbar.innerText = "Request Sent";
+        else snackbar.innerText = "Error Sending Request";
+
+        $(snackbar).addClass("show");
+        setTimeout(function(){ 
+            $(snackbar).removeClass("show"); 
+            if(successful) window.location.href = '/';
+        }, 3000);
     }
 
     (function init(){
         setActiveState(1);
     })();
 
+    return {setActiveState, submitContactForm}
 })();
+
