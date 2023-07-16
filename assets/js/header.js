@@ -5,7 +5,6 @@ title.classList.add('left-menu');
 const title_a = document.createElement('a');
 title_a.href = '/'
 const title_image = document.createElement('img');
-title_image.src = '/assets/icons/logo_title.svg'
 
 const navbar = document.createElement('div');
 navbar.classList.add('right-menu');
