@@ -87,6 +87,13 @@ bookNow.id = 'book-now-nav';
 bookNow.href = '/booking';
 bookNow.innerHTML = 'Book Now';
 
+const mobileMenu = document.createElement("div");
+mobileMenu.classList.add("mobile-menu-button");
+const mobileMenuDiv = document.createElement("div");
+const mobileMenuBackground = document.createElement("div");
+mobileMenuBackground.classList.add("mobile-menu-background");
+
+
 document.body.prepend(navbar_container);
 navbar_container.appendChild(title);
     title.appendChild(title_a);
@@ -113,3 +120,16 @@ navbar_container.appendChild(navbar);
     navbar.appendChild(map);
     navbar.appendChild(contact);
     navbar.appendChild(bookNow);
+navbar_container.appendChild(mobileMenu);
+    mobileMenu.appendChild(mobileMenuDiv);
+navbar_container.appendChild(mobileMenuBackground);
+
+
+function toggleMenu(){
+    navbar.classList.toggle("show");
+    mobileMenu.classList.toggle("show");
+    mobileMenuBackground.classList.toggle("show");
+}
+
+mobileMenu.addEventListener("click", toggleMenu);
+mobileMenuBackground.addEventListener("click", toggleMenu);
