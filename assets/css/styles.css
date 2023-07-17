@@ -1118,7 +1118,7 @@ header{
 .gallery-overview-grid{
     display: grid;
     grid-template-columns: repeat(3, 333px);
-    grid-template-rows: repeat(2, 250px);
+    grid-auto-rows: 250px;
     gap: 50px;
 }
 
@@ -1134,6 +1134,7 @@ header{
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 30px 30px -15px;
     cursor: pointer;
+    aspect-ratio: 1.3 / 1;
 }
 
 .gallery-image-container img{
@@ -1142,6 +1143,7 @@ header{
     min-width: 100%;
     object-fit: cover;
     width: 100%;
+    aspect-ratio: 1.3 / 1;
 }
 
 .gallery-label-container{
@@ -1741,12 +1743,8 @@ small.show {
     .gallery-overview-grid,
     .gallery-specific-grid{
         grid-template-columns: repeat(3, 260px);
-        grid-template-rows: repeat(2, 200px);
-        gap: 30px;
-    }
-
-    .gallery-specific-grid{
         grid-auto-rows: 200px;
+        gap: 30px;
     }
 
     .gallery-specific-container h1{
@@ -1825,10 +1823,19 @@ small.show {
         margin-bottom: 32px;
         width: 90%;
     }
+    
+    .overview-text-container div{
+        width: 100%;
+    }
+
+    .overview-text-container p{
+        margin: 0 0;
+    }
 
     .slideshow-container-left,
     .slideshow-container-right{
-        max-width: 70%;
+        max-width: 85%;
+        margin: auto 0;
     }
 
     .gallery-overview-grid,
@@ -1930,7 +1937,7 @@ small.show {
     .gallery-overview-grid,
     .gallery-specific-grid{
         grid-template-columns: repeat(2, 200px);
-        grid-template-rows: repeat(2, 150px);
+        grid-auto-rows: 150px;
     }
 
     .gallery-specific-grid{
@@ -2024,12 +2031,13 @@ small.show {
 
     .gallery-overview-grid,
     .gallery-specific-grid{
-        grid-template-columns: repeat(1, 260px);
-        grid-template-rows: repeat(2, 200px);
+        grid-template-columns: repeat(2, auto);
+        grid-auto-rows: 115px;
+        padding: 32px 8px;
     }
 
     .gallery-specific-grid{
-        grid-auto-rows: 200px;
+        grid-auto-rows: 150px;
     }
 
     .gallery-specific-container h1{
@@ -2069,7 +2077,7 @@ small.show {
 @media only screen and (max-width: 350px){
     .gallery-overview-grid{
         grid-template-columns: repeat(1, 200px);
-        grid-template-rows: repeat(2, 150px);
+        grid-auto-rows: 150px;
     }
 
     .contact-information{
