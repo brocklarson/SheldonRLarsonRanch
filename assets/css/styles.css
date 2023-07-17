@@ -599,6 +599,9 @@ header{
     padding: 0 25px;
     margin: 0 14px 0 0;
     background-color: #f3f3f3; 
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
 }
 
 .cabins-overview-image img, .attractions-overview-image img{
@@ -672,7 +675,7 @@ header{
 
 .cabin-overview-text-section1,
 .cabin-overview-text-section2{
-    width: 40%;
+    width: 50%;
     height: auto;
     float: left;
     padding: 0;
@@ -1749,6 +1752,10 @@ small.show {
     .gallery-specific-container h1{
         width: 815px;
     }
+
+    .cabins-overview-image, .attractions-overview-image{
+        padding: 0 15px;
+    } 
 }
 
 @media only screen and (max-width: 900px){
@@ -1779,6 +1786,27 @@ small.show {
 
     .gallery-specific-container h1{
         width: 525px;
+    }
+
+    .overview-container{
+        width: 95vw;
+    }
+
+    .cabins-overview-image{
+        padding: 0 8px;
+        width: 30%;
+    }
+
+    .attractions-overview-container{
+        height: 250px;
+    }
+
+    .attractions-overview-text p{
+        font-size: 1em;
+    }
+
+    .attractions-overview-info{
+        width: 100%;
     }
 }
 
@@ -1823,6 +1851,59 @@ small.show {
         height: 85vw;
         margin: 0 auto 24px auto;
         float: none;
+    }
+
+    .cabins-overview-container,
+    .attractions-overview-container{
+        width: 100%;
+    }
+
+    .attractions-overview-container{
+        height: 275px;
+    }
+
+    .cabins-overview-image, .attractions-overview-image{
+        padding: 0 4px;
+    } 
+
+    .cabins-overview-text{
+        width: 55%;
+    }
+
+    .cabin-overview-text-section1{
+        width: 40%;
+    }
+
+    .cabin-overview-text-section2{
+        width: 60%;
+    }
+
+    .cabins-overview-text p{
+        font-size: 0.9em;
+    }
+
+    .cabins-overview-price{
+        width: 15%;
+    }
+
+    .cabins-overview-price p{
+        font-size: 12px;
+    } 
+
+    .cabins-overview-price span{
+        font-size: 20px;
+    } 
+
+    .cabins-overview-image{
+        width: 25%;
+    }
+
+    .attractions-overview-info h1{
+        font-size: 24px;
+    }
+
+    .attractions-overview-info p{
+        font-size: 0.9em;
     }
 }
 
@@ -1880,6 +1961,47 @@ small.show {
         width: 100%;
         padding: 16px 16px;
     }
+
+    .overview-container{
+        width: 85vw;
+    }
+
+    .cabins-overview-container,
+    .attractions-overview-container{
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .cabins-overview-image,
+    .attractions-overview-image{
+        width: 100%;
+        padding: 0 16px;
+        margin-right: 0px;
+        height: 300px;
+    }
+
+    .cabins-overview-text{
+        width: 75%;
+    }
+   
+    .attractions-overview-text{
+        width: 100%;
+        padding: 8px 8px;
+    }
+
+
+    .cabins-overview-price{
+        width: 25%;
+        height: 200px;
+    }
+
+    
+}
+
+@media only screen and (max-width: 500px){
+    .overview-container{
+        width: 90vw;
+    }
 }
 
 @media only screen and (max-width: 450px){
@@ -1923,7 +2045,19 @@ small.show {
     .contact-information h5{
         font-size: 14px;
     }
-    
+
+    .cabins-overview-text{
+        width: 100%;
+    }
+
+    .cabins-overview-price{
+        display: none;
+    }
+
+    .fridge-icon{
+        height: 14px;
+        margin-bottom: -2px;
+    }    
 }
 
 @media only screen and (max-width: 350px){
@@ -1936,4 +2070,33 @@ small.show {
         padding: 16px 8px;
     }
 
+    .overview-container{
+        width: 95vw;
+    }
+
+    .cabins-overview-text h3,
+    .attractions-overview-text h3{
+        font-size: 1.25em;
+    }
+
+    .cabins-overview-text p,
+    .attractions-overview-text p{
+        font-size: 0.85em;
+    }
+
+}
+
+@media only screen and (max-width: 300px){
+    .cabins-overview-info{
+        flex-direction: column;
+    }
+
+    .cabin-overview-text-section1,
+    .cabin-overview-text-section2{
+        width: 100%;
+    }
+
+    .cabin-overview-text-section2 > p:first-child{
+        margin-top: 0;
+    }
 }
