@@ -1948,6 +1948,12 @@ small.show {
         width: 90vw;
     }
 
+    .map-howTo{
+        transform: scale(80%);
+        margin-bottom: 12px;
+        margin-right: 12px;
+    }
+
     .contact-container{
         flex-direction: column;
     }
