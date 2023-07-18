@@ -726,14 +726,17 @@ header{
 }
 
 .cabin-overview-icon-container{
-    height: 50px;
-    padding: 0;
-    margin: 10px 2% 0 2%;
+    height: fit-content;
+    padding: 0 0;
+    margin: 8px auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .cabin-overview-icon-container p{
-    display: block;
-    float: left;
+    display: inline-block;
     width: auto;
     margin-right: 16px;
 }
@@ -743,7 +746,7 @@ header{
 }
 
 .cabin-image-carousel-container{
-    margin: 0px 2% 0px 2%;
+    margin: 0 auto;
     padding: 0;
     width: 67vw;
     height: 51vw;
@@ -857,11 +860,19 @@ header{
     padding: 0;
 }
 
+.amenities-container ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .amenities{
-    display: inline-block;
+    display: list-item;
     width: 275px;
-    margin: 0;
-    padding: 0 16px 0 0;
+    margin: 8px 0;
+    padding: 0 0;
+    list-style-type: disc; 
+    list-style-position: inside;
 }
 
 .rates-table{
@@ -2006,10 +2017,17 @@ small.show {
     .cabins-overview-price{
         width: 25%;
         height: 200px;
+    }    
+
+    .cabin-page-navigator{
+        display: none;
     }
 
-    
+    .cabin-description-text-area{
+        margin: 0 0;
+    }
 }
+
 
 @media only screen and (max-width: 500px){
     .overview-container{
@@ -2072,6 +2090,10 @@ small.show {
         height: 14px;
         margin-bottom: -2px;
     }    
+
+    .rates-table{
+        font-size: 14px;
+    }
 }
 
 @media only screen and (max-width: 350px){
@@ -2098,6 +2120,9 @@ small.show {
         font-size: 0.85em;
     }
 
+    .rates-table{
+        font-size: 12px;
+    }
 }
 
 @media only screen and (max-width: 300px){

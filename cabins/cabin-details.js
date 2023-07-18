@@ -106,12 +106,14 @@ const createUI = (cabin) => {
         });
 
         const amenitiesContainer = document.querySelector(".amenities-container");
+        const amenitiesList = document.createElement("ul");
+        amenitiesContainer.appendChild(amenitiesList);
         cabin.amenities.forEach(amenity => {
             console.log(amenity);
-            const amenityText = document.createElement("p");
-            amenityText.innerText = `- ${amenity}`;
+            const amenityText = document.createElement("li");
+            amenityText.innerText = `${amenity}`;
             amenityText.classList.add("amenities");
-            amenitiesContainer.appendChild(amenityText);
+            amenitiesList.appendChild(amenityText);
         });
     }
     createDOM();

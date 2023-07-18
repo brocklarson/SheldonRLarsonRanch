@@ -54,7 +54,6 @@ let imgs = [
     {src: "/assets/images/Main-Cabin/012.jpg", alt: "Main cabin heirloom"},
     {src: "/assets/images/Main-Cabin/013.jpg", alt: "Main cabin heirloom"},
     {src: "/assets/images/Main-Cabin/014.jpg", alt: "Main cabin heirloom"},
-    {src: "/assets/images/Main-Cabin/015.jpg", alt: "Main cabin heirloom"},
     {src: "/assets/images/Courtyard/006.jpg", alt: "Utah century farm & ranch homestead"},
     {src: "/assets/images/Ranch/001.jpg", alt: "View of ranch"},
     {src: "/assets/images/Main-Cabin/010.jpg", alt: "Guest book"},
