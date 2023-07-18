@@ -748,18 +748,21 @@ header{
 .cabin-image-carousel-container{
     margin: 0 auto;
     padding: 0;
-    width: 67vw;
+    width: 80vw;
     height: 51vw;
     max-height: 88vh;
     overflow: hidden;
     z-index: 1;
     border-radius: 5px;
     background-color: #000;
+    display: flex;
 }
 
 .cabin-image-carousel-img{
     height: 100%;
     width: auto;
+    justify-self: center;
+    align-self: center;
 }
 
 .cabin-image-carousel-prev, .cabin-image-carousel-next{
@@ -1949,6 +1952,7 @@ small.show {
     .gallery-specific-grid{
         grid-template-columns: repeat(2, 200px);
         grid-auto-rows: 150px;
+        gap: 2vw;
     }
 
     .gallery-specific-grid{
@@ -2052,15 +2056,16 @@ small.show {
         grid-template-columns: repeat(2, auto);
         grid-auto-rows: 115px;
         padding: 32px 8px;
+        gap: 1vw;
     }
 
     .gallery-specific-grid{
-        grid-auto-rows: 150px;
+        padding: 0 8px;
     }
 
     .gallery-specific-container h1{
-        width: 235px;
-        font-size: 1em;
+        width: 100%;
+        text-align: center;
     }
 
     .map-container,
@@ -2093,6 +2098,10 @@ small.show {
 
     .rates-table{
         font-size: 14px;
+    }
+
+    .cabin-image-carousel-container{
+        width: 90vw;
     }
 }
 
