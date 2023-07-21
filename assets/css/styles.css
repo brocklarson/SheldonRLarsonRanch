@@ -246,6 +246,7 @@ header{
     align-items: center;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 30px 30px -15px;
+    color: black;
     display: flex;
     font-family: var(--default-font-family);
     overflow: hidden;
@@ -259,6 +260,7 @@ header{
 .homepage-date-selector{
     font-size: inherit;
     border: solid 1px black;
+    color: black;
     height: 50%;
     background-color: white;
     border-radius: 5px;
