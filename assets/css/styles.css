@@ -179,8 +179,7 @@ header{
 }
 
 .mobile-menu-button.show{
-    transform: translateX(-300px);
-    z-index: 100;
+    z-index: 101;
 }
 
 .mobile-menu-button.show:before {
@@ -1745,7 +1744,7 @@ small.show {
         background: white;
         align-items: center;
         justify-content: flex-start;
-        padding: 50px 8px;
+        padding: var(--header-height) 8px 50px 8px;
         z-index: 100;
         max-width: 80vw;
         width: 300px;
@@ -2073,9 +2072,6 @@ small.show {
 @media only screen and (max-width: 450px){
     .homepage-image{
         height: 100vw;
-    }
-    .mobile-menu-button.show{
-        transform: translateX(calc(-80vw + 50%));
     }
 
     .mobile-menu-button {
