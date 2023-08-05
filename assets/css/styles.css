@@ -496,6 +496,13 @@ header{
     overflow: scroll;
 }
 
+.map-icon{
+    height: 20px;
+    width: 20px;
+    margin: auto 8px auto 0;
+    padding: 0;
+}
+
 .map-container iframe{
     height: 100%;
     width: 100%;
@@ -520,12 +527,19 @@ header{
     display: none;
 }
 
-#map-explanation p{
+#map-explanation ul li{
     font-family: var(--default-font-family);
-    line-height: 24px;
     font-size: 18px;
-    margin: 0 0 16px 0;
+    list-style-position: outside;
+    text-align: left;
+    margin-left: 16px;
+    margin-bottom: 8px;
 }
+
+#sidebarIcon{list-style-image: url("/assets/icons/sidebar.png");  margin-left: 35px !important;}
+#starIcon{list-style-image: url("/assets/icons/star.png");  margin-left: 35px !important;}
+#shareIcon{list-style-image: url("/assets/icons/share.png");  margin-left: 35px !important;}
+#fullscreenIcon{list-style-image: url("/assets/icons/fullscreen.png");  margin-left: 35px !important;}
 
 #map-overlay{
     display: none;
