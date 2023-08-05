@@ -1219,10 +1219,10 @@ header{
 }
 
 /* LIGHTBOX SLIDSHOW */
-.lb-loader,.lightbox{text-align:center;line-height:0;position:absolute;left:0}
+.lb-loader,.lightbox{text-align:center;line-height:0;position:fixed;left:0; top:50% !important; transform: translateY(-50%)}
 body.lb-disable-scrolling{overflow:hidden}
 .lightboxOverlay{position:absolute;top:0;left:0;z-index:9999;background-color:#000;filter:alpha(Opacity=80);opacity:.8;display:none}
-.lightbox{width:100%;z-index:10000;font-weight:400;outline:0}
+.lightbox{width:100%;z-index:10000;font-weight:400;outline:0;}
 .lightbox .lb-image{display:block;height:auto;max-width:inherit;max-height:none;border-radius:3px;border:none}
 .lightbox a img{border:none}
 .lb-outerContainer{position:relative;width:250px;height:250px;margin:0 auto;border-radius:4px;background-color:#fff}
@@ -1724,6 +1724,7 @@ small.show {
     .right-menu{
         position: fixed;
         top: 0;
+        bottom: 0;
         right: 0;
         transform: translateX(100%);
         flex-direction: column;
@@ -1732,9 +1733,9 @@ small.show {
         justify-content: flex-start;
         padding: 50px 8px;
         z-index: 100;
-        height: 100vh;
         max-width: 80vw;
         width: 300px;
+        overflow-y: scroll;
     }
     .right-menu > a{
         margin: 16px 0;
@@ -1839,6 +1840,11 @@ small.show {
         margin-bottom: 32px;
         width: 90%;
     }
+
+    .overview-text-container h1{
+        padding: 0 16px;
+        text-align: center;
+    }
     
     .overview-text-container div{
         width: 100%;
@@ -1931,6 +1937,10 @@ small.show {
 }
 
 @media only screen and (max-width: 600px){
+    header{
+        padding: 8px 16px 0;
+    }
+
     .left-menu {
         max-width: 75%;
     }
@@ -2005,9 +2015,14 @@ small.show {
     .cabins-overview-image,
     .attractions-overview-image{
         width: 100%;
-        padding: 0 16px;
+        padding: 0 0;
         margin-right: 0px;
         height: 300px;
+    }
+
+    .cabins-overview-image img,
+    .attractions-overview-image img{
+        border-radius: 4px 4px 0 0;
     }
 
     .cabins-overview-text{
@@ -2056,9 +2071,14 @@ small.show {
     .gallery-overview-grid,
     .gallery-specific-grid{
         grid-template-columns: repeat(2, auto);
-        grid-auto-rows: 115px;
+        grid-auto-rows: max-content;
         padding: 32px 8px;
         gap: 1vw;
+    }
+
+    .gallery-image-container,
+    .gallery-specific-grid > a{
+        height: 115px;
     }
 
     .gallery-specific-grid{
