@@ -1267,8 +1267,9 @@ body.lb-disable-scrolling{overflow:hidden}
     justify-content: center;
     flex-direction: row;
     width: 100%;
+    height: 100%;
     min-height: calc(100vh - var(--header-height)); 
-    background: #f7f7f7;
+    background-color: #f7f7f7;
     padding-top: 16px;
 }
 
@@ -1337,19 +1338,14 @@ body.lb-disable-scrolling{overflow:hidden}
 }
 
 .booking-details-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     width: 600px;
     height: max-content;
     border: none;
     font-family: var(--default-font-family);
-    margin-right: 8px;
     padding-bottom: 200px;
-    position: relative;
-}
-
-.booking-extras-container{
-    width: 100px;
-    height: 100%;
-    background: cyan;
 }
 
 small {
@@ -1357,7 +1353,7 @@ small {
     display: none;
     font-size: 0.9em;
     margin: 0 0 8px 32px;
-    white-space: nowrap;
+    white-space: wrap;
 }
 
 small.show {
@@ -1419,6 +1415,7 @@ small.show {
     font-weight: 400;
     height: 30px;
     margin: 0px 16px 20px 32px;
+    max-width: 75%;
     padding: 0 0 0 8px;
     text-shadow: none;
     width: 205px;
@@ -1446,7 +1443,7 @@ small.show {
 
 .people-select-container{
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex: 1 1 0;
     border-bottom: none;
 }
@@ -1468,11 +1465,9 @@ small.show {
     padding: 8px 20px;
     font-family: var(--default-font-family);
     width: min-content;
-    transform: translateY(20px);
-    position: absolute;
-    right: 0;
-    margin-right: 16px;
+    margin: 20px 16px 20px 0px;
     cursor: pointer;
+    align-self: flex-end;
 }
 
 #booking-next:hover, #booking-next:focus{
@@ -1582,7 +1577,7 @@ small.show {
     font-family: var(--default-font-family);
     color: #555;
     margin: 0px 8px 0px 8px; 
-    padding-left: 10px;
+    padding-left: 0px;
 }
 
 #safety-agreement a{
@@ -1616,7 +1611,7 @@ small.show {
 .checkbox-custom{
     position: absolute;
     top: 0;
-    left: -15px;
+    left: -30px;
     height: 20px;
     width: 20px;
     border-radius: 5px;
@@ -1784,6 +1779,7 @@ small.show {
     .cabins-overview-image, .attractions-overview-image{
         padding: 0 15px;
     } 
+    
 }
 
 @media only screen and (max-width: 900px){
@@ -1835,6 +1831,26 @@ small.show {
 
     .attractions-overview-info{
         width: 100%;
+    }
+
+    .booking-container{
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    .booking-steps-container{
+        width: 600px;
+        flex-direction: row;
+    }
+    
+    .booking-steps-button,
+    .booking-steps-button.active{
+        width: 25%;
+    }
+
+    .booking-steps-button.active{
+        height: 80px;
     }
 }
 
@@ -1946,6 +1962,14 @@ small.show {
 
     .attractions-overview-info p{
         font-size: 0.9em;
+    }
+}
+
+@media only screen and (max-width: 650px){
+    .booking-steps-container,
+    .booking-details-container{
+        width: 100%;
+        padding: 0 16px;
     }
 }
 
@@ -2135,6 +2159,10 @@ small.show {
     .cabin-image-carousel-container{
         width: 90vw;
     }
+
+    .booking-steps-button p{
+        font-size: 14px;
+    }
 }
 
 @media only screen and (max-width: 350px){
@@ -2163,6 +2191,16 @@ small.show {
 
     .rates-table{
         font-size: 12px;
+    }
+
+    .booking-steps-button{
+        overflow-y: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .booking-steps-button p{
+        display: none;
     }
 }
 
