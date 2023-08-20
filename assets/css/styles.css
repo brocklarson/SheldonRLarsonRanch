@@ -1298,13 +1298,11 @@ body.lb-disable-scrolling{overflow:hidden}
     font-family: var(--default-font-family);
     font-size: 16px;
     color: #555;
-    opacity: 40%;
     pointer-events: none;
 }
 
 .booking-steps-button i{
     color: #555;
-    opacity: 40%;
     pointer-events: none;
 }
 
