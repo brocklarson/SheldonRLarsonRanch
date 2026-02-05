@@ -289,7 +289,7 @@ const stateHandler = (() => {
         $(snackbar).addClass("show");
         setTimeout(function(){ 
             $(snackbar).removeClass("show"); 
-            if(successful) window.location.href = '/';
+            if(successful) window.location.href = '/SheldonRLarsonRanch/';
         }, 3000);
     }
 

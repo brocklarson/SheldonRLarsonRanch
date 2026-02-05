@@ -3,46 +3,46 @@ const navbar_container = document.createElement('header');
 const title = document.createElement('div');
 title.classList.add('left-menu');
 const title_a = document.createElement('a');
-title_a.href = '/'
+title_a.href = '/SheldonRLarsonRanch/'
 const title_image = document.createElement('img');
 
 const navbar = document.createElement('div');
 navbar.classList.add('right-menu');
 const chevron = document.createElement('img');
-chevron.src = '/assets/icons/chevron-down-small.svg';
+chevron.src = '/SheldonRLarsonRanch/assets/icons/chevron-down-small.svg';
 
 const home = document.createElement('a');
-home.href = '/';
+home.href = '/SheldonRLarsonRanch/';
 home.innerHTML = 'Home';
 
 const cabins = document.createElement('a');
-cabins.href = '/cabins';
+cabins.href = '/SheldonRLarsonRanch/cabins';
 cabins.innerHTML = 'Cabins&nbsp;' + chevron.outerHTML;
 cabins.classList.add('dropdown-toggle');
 
 const events = document.createElement('a');
-events.href = '/events';
+events.href = '/SheldonRLarsonRanch/events';
 events.innerHTML = 'Events';
 
 const cabins_dropdown = document.createElement('div');
 cabins_dropdown.classList.add('dropdown');
 const main_cabin = document.createElement('a');
 main_cabin.innerHTML = 'Main Cabin';
-main_cabin.href = '/cabins/main-cabin';
+main_cabin.href = '/SheldonRLarsonRanch/cabins/main-cabin';
 const guest_cabin = document.createElement('a');
 guest_cabin.innerHTML = 'Guest Cabin';
-guest_cabin.href = '/cabins/guest-cabin';
+guest_cabin.href = '/SheldonRLarsonRanch/cabins/guest-cabin';
 
 const gallery = document.createElement('a');
-gallery.href = '/gallery';
+gallery.href = '/SheldonRLarsonRanch/gallery';
 gallery.innerHTML = 'Gallery';
 
 const availability = document.createElement('a');
-availability.href = '/availability';
+availability.href = '/SheldonRLarsonRanch/availability';
 availability.innerHTML = 'Availability';
 
 const attractions = document.createElement('a');
-attractions.href = '/attractions';
+attractions.href = '/SheldonRLarsonRanch/attractions';
 attractions.innerHTML = 'Attractions&nbsp;' + chevron.outerHTML;
 attractions.classList.add('dropdown-toggle');
 
@@ -50,40 +50,40 @@ const attractions_dropdown = document.createElement('div');
 attractions_dropdown.classList.add('dropdown');
 const atv = document.createElement('a');
 atv.innerHTML = 'ATV';
-atv.href = '/attractions/atv';
+atv.href = '/SheldonRLarsonRanch/attractions/atv';
 const mtb = document.createElement('a');
 mtb.innerHTML = 'MTB';
-mtb.href = '/attractions/mtb';
+mtb.href = '/SheldonRLarsonRanch/attractions/mtb';
 const hiking = document.createElement('a');
 hiking.innerHTML = 'Hiking';
-hiking.href = '/attractions/hiking';
+hiking.href = '/SheldonRLarsonRanch/attractions/hiking';
 const rock_climbing = document.createElement('a');
 rock_climbing.innerHTML = 'Rock Climbing';
-rock_climbing.href = '/attractions/rock-climbing';
+rock_climbing.href = '/SheldonRLarsonRanch/attractions/rock-climbing';
 const snowmobiling = document.createElement('a');
 snowmobiling.innerHTML = 'Snowmobiling';
-snowmobiling.href = '/attractions/snowmobiling';
+snowmobiling.href = '/SheldonRLarsonRanch/attractions/snowmobiling';
 const hist = document.createElement('a');
 hist.innerHTML = 'History';
-hist.href = '/attractions/history';
+hist.href = '/SheldonRLarsonRanch/attractions/history';
 const sightseeing = document.createElement('a');
 sightseeing.innerHTML = 'Sightseeing';
-sightseeing.href = '/attractions/sightseeing';
+sightseeing.href = '/SheldonRLarsonRanch/attractions/sightseeing';
 const other = document.createElement('a');
 other.innerHTML = 'Other';
-other.href = '/attractions/other';
+other.href = '/SheldonRLarsonRanch/attractions/other';
 
 const map = document.createElement('a');
-map.href = '/map';
+map.href = '/SheldonRLarsonRanch/map';
 map.innerHTML = 'Map';
 
 const contact = document.createElement('a');
-contact.href = '/contact';
+contact.href = '/SheldonRLarsonRanch/contact';
 contact.innerHTML = 'Contact';
 
 const bookNow = document.createElement('a');
 bookNow.id = 'book-now-nav';
-bookNow.href = '/booking';
+bookNow.href = '/SheldonRLarsonRanch/booking';
 bookNow.innerHTML = 'Book Now';
 
 const mobileMenu = document.createElement("div");

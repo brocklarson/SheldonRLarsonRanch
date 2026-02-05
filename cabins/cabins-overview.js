@@ -63,7 +63,7 @@ const createUI = (cabinObj) => {
         const kitchenText = document.createElement('p');
         kitchenText.innerText = ' ' + cabin.kitchen;
         const kitchenIcon = document.createElement('img');
-        kitchenIcon.src = '/assets/icons/fridge.svg';
+        kitchenIcon.src = 'SheldonRLarsonRanch/assets/icons/fridge.svg';
         kitchenIcon.height="16";
         kitchenIcon.width="25";
         kitchenIcon.alt="fridge icon";

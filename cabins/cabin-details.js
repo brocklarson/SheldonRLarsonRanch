@@ -16,7 +16,7 @@ const createUI = (cabin) => {
                 <p><i class="fas fa-user-friends cabin-overview-icon cabin-overview-icon-right"></i>${cabin.people}</p> 
                 <p><i class="fas fa-bed cabin-overview-icon cabin-overview-icon-right"></i>${cabin.beds}</p>
                 <p><i class="fas fa-bath cabin-overview-icon cabin-overview-icon-right"></i>${cabin.baths}</p>
-                <p><img src="/assets/icons/fridge.svg" height="16" width="25" alt="fridge icon" class="fridge-icon"/>${cabin.kitchen}</p>   
+                <p><img src="/SheldonRLarsonRanch/assets/icons/fridge.svg" height="16" width="25" alt="fridge icon" class="fridge-icon"/>${cabin.kitchen}</p>   
                 <p><i class="fas fa-car cabin-overview-icon cabin-overview-icon-right"></i>${cabin.parking}</p> 
                 <p><i class="fas fa-paw cabin-overview-icon cabin-overview-icon-right"></i>${cabin.pets}</p>
             </div>
